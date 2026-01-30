@@ -1,0 +1,14 @@
+{% macro render_toc(items) -%}
+<ul class="ts-list is-small is-unordered">
+    {%- for item in items %}
+    {% if item.type == 'folder' %}
+    <li class="item">
+        <a class="ts-text is-undecorated" href="#folder-{{ item.id }}">{{ item.name }}</a>
+        {% if item.contents %}
+        {{ render_toc(item.contents) }}
+        {% endif %}
+    </li>
+    {% endif %}
+    {%- endfor %}
+</ul>
+{%- endmacro %}

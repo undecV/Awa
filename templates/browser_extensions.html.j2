@@ -1,0 +1,176 @@
+---
+data: ../data/browser_extensions.app.yml
+output: browser_extensions.html
+---
+
+{% extends "./partials/base.html.j2" %}
+
+{% block i18n %}
+{% include "./i18n/zh-TW.html.j2" %}
+{% endblock %}
+
+{# head #}
+
+{% set site_name="キャンディージャー" %}
+{% set page_title="用過都說好的瀏覽器擴充套件推薦" %}
+{% set author="undecV" %}
+{% set author_link="https://github.com/undecv" %}
+
+{% set favicon="https://undecv.github.io/blog/favicon.32.png" %}
+{% set description="推薦一些瀏覽器擴充套件" %}
+{% set locale="zh_Hant" %}
+{% set canonical="https://undecv.github.io/Awa/browser_extensions.html" %}
+{% set fediverse="@undecv@g0v.social" %}
+{% block tracker %}
+<!--Umami Tracker-->
+<script async="" defer="" data-website-id="" src=""></script>
+{% endblock %}
+
+{# body #}
+
+{# header #}
+
+{% set header_links = [
+{"icon": "house", "outside": true, "tooltip": "回到我的部落格", "href": "https://undecv.github.io/blog/"},
+{"icon": "github", "outside": true, "href": "https://github.com/undecv/awesome-windows-applications/"},
+] %}
+
+{# article #}
+
+{# before #}
+
+{% block before %}
+<p class="ts-quote is-secondary"><del>什麼？您在用 IE？</del></p>
+
+<div class="ts-notice is-outlined" style="text-decoration: none;">
+  <div class="title">覺得我廢話太多？</div>
+  <div class="content">那就看看左邊索引！</div>
+</div>
+
+<p>本文的範圍是「瀏覽器擴充套件」，不一定有加入一些 SaaS 網頁應用和服務所附帶的擴充套件，想到會再加。</p>
+<p>由於我主要使用 Firefox，這個擴充套件列表的內容會以 firefox 為主。</p>
+<p>文章其中的一些擴充套件，我可能不常用，甚至時下可能還沒有安裝，但我一定都有用過、體驗過。</p>
+<p>這裡的選擇標準非常的...主觀。不是排名，不分先後。以下是我的選擇標準：</p>
+<ul class="ts-list is-unordered">
+  <li class="item">確實能夠解決問題，且有效的解決問題；</li>
+  <li class="item">沒有騷擾性質的廣告；</li>
+  <li class="item">界面端莊優雅，易於使用。</li>
+  <li class="item">開源和自由軟體。</li>
+</ul>
+
+<h2>標記</h2>
+<p>本文的標記可能並不完全或有誤，甚至隨着時間的流逝而與現時不符，所以<b>僅供參考</b>，<br />
+  若發現有漏標或錯標，又或是你有更好的選擇，歡迎告訴我 :)</p>
+<ul class="ts-list is-unordered">
+  <li class="item">
+    <p>我們使用看上去十分專業的「雙名法」，即「發佈者／軟體名」。</p>
+  </li>
+  <li class="item">
+    <p>
+      右側的例如
+      <span class="ts-chip"><span class="ts-icon is-house-icon"></span></span>
+      是連結到官方網站、對應的應用商店等的連結。
+    </p>
+  </li>
+  <li class="item">
+    <p class="ts-text">
+      軟體的費用有不要錢的 <span class="ts-chip is-circular">免費</span>，
+      還有課金變強的 <span class="ts-chip is-circular">加值</span>，
+      和花錢才能用的 <span class="ts-chip is-circular">付費</span>。
+    </p>
+  </li>
+  <li class="item">
+    <p>
+      軟體的授權有 <span class="ts-chip is-circular">開源</span>
+      標記 <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+        href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6">開放原始碼</a>
+      或 <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+        href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E8%BD%AF%E4%BB%B6">自由軟體</a>
+      ；滑鼠放在上面可以看到看具體的許可證。<br />
+      沒有使用上述開放授權的軟體用 <span class="ts-chip is-circular">專有</span> 標記。
+    </p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">全家桶</span>
+      表示這是一個軟體集合，我都推薦<del>（箱推）</del>。</p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">硬核</span> 表示這個軟體有較高的學習門檻。
+    </p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">專業</span>
+      表示使用這個軟體需要具備相關的專業知識。
+    </p>
+  </li>
+</ul>
+{% endblock %}
+
+{% block after %}
+<h2>如何尋找優秀的實用軟體</h2>
+
+<h3>怎麼找？</h3>
+<ul class="ts-list is-unordered">
+  <li class="item">電腦的軟體的強大，不在於能做到多少事情，而是一件事情能做得多好。</li>
+  <li class="item">應用軟體應該旨在幫助用戶完成工作，提高效率。 <del>而不是讓用戶的電腦成為廣告投放機。</del></li>
+  <li class="item">
+    一些很棒的軟體功能非常強大，但是學習門檻較高，或是需要經過調教，<del>甚至可能需要老司機帶路，</del>但是學會了就能夠享受它們的便利了。
+  </li>
+  <li class="item">不要小看網頁瀏覽器的附加元件＼擴充套件，他們能夠極大地提高體驗和便利。</li>
+</ul>
+
+<h3>去哪裡找？</h3>
+<ul class="ts-list is-unordered">
+  <li class="item">看緣分（這是真...</li>
+  <li class="item">擴充套件通常都來自瀏覽器所經營的擴充套件商店。擴充套件的安全性也通常有他們的把關，擴充套件商店也會精選出一些口碑良好的擴充套件。
+    <ul class="ts-list is-unordered">
+      <li> <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link" href="https://addons.mozilla.org/en-US/firefox/">Add-ons for Firefox</a></li>
+      <li> <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link" href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store - Extensions</a></li>
+      <li> <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link" href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home">Microsoft Edge Add-ons</a></li>
+    </ul>
+  </li>
+  <li class="item">尋找現有軟體的替代品：
+    <ul class="ts-list is-unordered">
+      <li>
+        <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="https://alternativeto.net/">AlternativeTo</a>
+      </li>
+      <li><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="https:/openalternative.co/alternatives">OpenAlternative</a>
+      </li>
+    </ul>
+  </li>
+  <li class="item">推介軟體的部落格＼網站也會推介擴充套件。
+  </li>
+</ul>
+{% endblock %}
+
+{# footer #}
+
+{% set footer_links = [
+{"content": "Discussions", "outside": true, "href":
+"https://github.com/undecV/awesome-windows-applications/discussions"},
+{"content": "Privacy", "outside": true, "href": "https://undecv.github.io/blog/privacy/"},
+] %}
+
+
+{# copyright #}
+
+{% block copyright %}
+© 2017-{{ now.strftime('%Y') }} by
+<a target="_blank" rel="noopener noreferrer" href="{{ author_link }}">{{ author }}</a>
+is licensed under
+<a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  CC BY-NC-SA 4.0</a>
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+{% endblock %}
+{% block copyright_2 %}
+Generated by <a href="https://github.com/undecV/Awa" target="_blank" rel="noopener noreferrer">Awa</a>.
+{% endblock %}

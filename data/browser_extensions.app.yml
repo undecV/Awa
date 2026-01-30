@@ -1,0 +1,1444 @@
+# yaml-language-server: $schema=../schemas/awa.1.0.0.schema.json
+
+meta: {}
+contents:
+- name: Blocker - 廣告與追蹤器阻擋
+  type: folder
+  id: blockers
+  contents:
+    - name: Trackers - 追蹤器
+      type: folder
+      id: tracker-blockers
+      comment: 追蹤器阻擋工具裝多了容易打架。誤殺可能讓某些網站無法正常運作。
+      contents:
+        - publisher: EFF Technologists
+          name: Privacy Badger
+          comment: 電子前哨基金會出品，阻擋追蹤器。
+          cost: free
+          licenses: [GPL-3.0]
+          tags: ["AMO Recommended", "Firefox for Android"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/privacy-badger17/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/mkejgcgkdlddbggjhhflekkondicpnop}
+            - {class: homepage, href: https://privacybadger.org/}
+        - publisher: DuckDuckGo
+          name: DuckDuckGo Privacy Essentials
+          comment: 搜尋引擎 DuckDuckGo 出品，阻擋追蹤器。
+          cost: free
+          licenses: [Apache-2.0]
+          tags: ["AMO Recommended"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/duckduckgo-for-firefox/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/caoacbimdbbljakfhgikoodekdnlcgpk}
+            - {class: homepage, href: https://duckduckgo.com/}
+        - publisher: Startpage
+          name: Startpage
+          comment: 搜尋引擎 Startpage 出品。本質是 Google 搜尋的匿名代理。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/startpage-private-search/}
+            - {class: chrome, href: https://chromewebstore.google.com/publisher/startpage/uc99513a65c47739f53b6107f340b3c08}
+            - {class: homepage, href: https://www.startpage.com/}
+        - publisher: Startpage
+          name: Startpage Privacy Protection
+          comment: 搜尋引擎 Startpage 出品。本質是 Google 搜尋的匿名代理。附贈追蹤器阻擋功能。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/startpage-privacy-protection/}
+            - {class: homepage, href: https://www.startpage.com/}
+        - publisher: Thomas Rientjes
+          name: Decentraleyes
+          comment: 阻擋 CDN 的追蹤器。
+          cost: free
+          licenses: [MPL-2.0]
+          tags: ["AMO Recommended", "Firefox for Android"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/decentraleyes/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/lmijmgnfconjockjeepmlmkkibfgjmla}
+            - {class: homepage, href: https://decentraleyes.org/}
+        - publisher: Rob W
+          name: Dont track me Google
+          comment: 移除 Google 的轉址追蹤。
+          cost: free
+          licenses: [MIT]
+          tags: ["AMO Recommended", "Firefox for Android"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/addon/dont-track-me-google1/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/dont-track-me-google/gdbofhhdmcladcmmfjolgndfkpobecpg}
+            - {class: github, href: https://github.com/Rob--W/dont-track-me-google}
+    - name: Ads - 廣告
+      type: folder
+      id: ad-blockers
+      contents:
+        - publisher: gorhill
+          name: uBlock Origin
+          comment: 擋廣告。
+          cost: free
+          licenses: [GPL-3.0]
+          tags: ["AMO Recommended", "Firefox for Android"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/ublock-origin/}
+            - {class: github, href: https://github.com/gorhill/uBlock}
+        - publisher: uBlockOrigin
+          name: uBlock Origin Lite
+          comment: 擋廣告。
+          note: 由於 Chrome / Chromium 和它的孩子們所推廣的 Manifest V3 限制了擋廣告相關的 API，所以有了這個。Firefox 可以繼續用原版。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: chrome, href: https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/ublock-origin-lite/cimighlppcgcoapaliogpjjdehbnofhn}
+            - {class: safari, href: https://apps.apple.com/us/app/ublock-origin-lite/id6745342698}
+            - {class: github, href: https://github.com/uBlockOrigin/uBOL-home}
+    - name: Search Results - 搜尋結果
+      type: folder
+      id: search-blockers
+      contents:
+        - publisher: iorate
+          name: uBlacklist
+          comment: 封鎖指定搜尋結果。
+          licenses: [MIT]
+          cost: free
+          tags: ["Firefox for Android"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/ublacklist/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe/}
+            - {class: safari, href: https://apps.apple.com/us/app/ublacklist-for-safari/id1547912640}
+            - {class: homepage, href: https://ublacklist.github.io/docs}
+        - publisher: Danny Lin
+          name: Content Farm Terminator
+          comment: 標示並封鎖內容農場。
+          cost: free
+          licenses: [GPL-3.0]
+          tags: ["Firefox for Android"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/content-farm-terminator/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/lcghoajegeldpfkfaejegfobkapnemjl}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/fgckcfkpckemdnnejbbfkkchanedbejeg}
+            - {class: github, href: https://github.com/danny0838/content-farm-terminator}
+    - name: JavaScript - 程式
+      type: folder
+      id: javascript-blockers
+      contents:
+        - publisher: Giorgio Maone
+          name: NoScript Security Suite
+          comment: 阻擋 JavaScript 網頁腳本。
+          note: 這通常會使得大部分現代網頁無法正常運作，但如果你願意花時間設定的話，能大幅提升瀏覽器安全性與隱私保護。
+          tags: ["AMO Recommended", "Tor Included"]
+          cost: free
+          licenses: [GPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/noscript/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm}
+            - {class: homepage, href: https://noscript.net/}
+- name: Privacy and Security - 隱私與安全
+  type: folder
+  id: security
+  contents:
+    - publisher: Firefox
+      name: Firefox Relay
+      comment: 安全的轉寄信箱與手機轉接號碼。用於保護身分隱私，例如匿名地註冊新帳號。
+      cost: free
+      tags: ["By Firefox"]
+      licenses: [MPL-2.0]
+      links:
+      - {class: firefox, href: https://addons.mozilla.org/firefox/addon/private-relay/}
+      - {class: homepage, href: https://relay.firefox.com/}
+    - publisher: Cloudflare Research
+      name: Privacy Pass
+      comment: Cloudflare 官方出品，快速通過 hCaptcha 的人機驗證。
+      note: Cloudflare：我繞過我自己的人機驗證
+      cost: free
+      licenses: [BSD-2-Clause]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/privacy-pass/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/privacy-pass/ajhmfdgkijocedmfjonnpjfojldioehi/}
+        - {class: homepage, href: https://privacypass.github.io/}
+    - publisher: VirusTotal Team
+      name: VT4Browsers
+      comment: VirusTotal 官方客戶端。多引擎查毒。
+      cost: free
+      licenses: [BSD-2-Clause]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/vt4browsers/}
+        - {class: homepage, href: https://www.virustotal.com/}
+    - name: Cookies - Cookies 管理
+      type: folder
+      id: cookies
+      contents:
+        - publisher: ysard
+          name: Cookie Quick Manager
+          comment: Cookies 編輯器。
+          tags: ["AMO Recommended"]
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/cookie-quick-manager/}
+            - {class: github, href: https://github.com/ysard/cookie-quick-manager}
+        - publisher: Jan Riechers
+          name: Flag Cookies
+          comment: 跨瀏覽器的 Cookies 編輯器。
+          note: 跨瀏覽器的編輯器好處是可以在不同瀏覽器間倒來倒去。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/flag-cookies/}
+            - {class: chrome, href: https://addons.opera.com/en/extensions/details/flag-cookies/}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/flag-cookies/jonbmefahinfgmdoedhahcohlbmonhkb}
+            - {class: homepage, href: https://dwrox.net/}
+        - publisher: moustachauve
+          name: Cookie-Editor
+          comment: 跨瀏覽器的 Cookies 編輯器。
+          note: 跨瀏覽器的編輯器好處是可以在不同瀏覽器間倒來倒去。
+          tags: ["Firefox for Android"]
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/addon/cookie-editor}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/cookieeditor/neaplmfkghagebokkhpjpoebhdledlfi}
+            - {class: safari, href: https://apps.apple.com/app/apple-store/id6446215341}
+            - {class: github, href: https://github.com/moustachauve/cookie-editor}
+        - publisher: CAD Team
+          name: Cookie AutoDelete
+          comment: 自動刪除不需要的 Cookies。
+          tags: ["Firefox for Android"]
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/cookie-autodelete/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/cookie-autodelete/fhcgjolkccmbidfldomjliifgaodjagh}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/djkjpnciiommncecmdefpdllknjdmmmo}
+            - {class: github, href: https://github.com/Cookie-AutoDelete/Cookie-AutoDelete}
+        - publisher: Gen Digital Inc
+          name: I don't care about cookies
+          comment: 自動關閉網站的 Cookies 通知。
+          note: 效果因人而異。
+          tags: ["Firefox for Android"]
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/addon/i-dont-care-about-cookies/}
+            - {class: firefox, href: https://chromewebstore.google.com/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja}
+            - {class: firefox, href: https://microsoftedge.microsoft.com/addons/detail/oholpbloipjbbhlhohaebmieiiieioal}
+            - {class: homepage, href: https://www.i-dont-care-about-cookies.eu/}
+    - name: Firefox Containers - Firefox 容器
+      type: folder
+      id: firefox-containers
+      comment: Firefox 功能，隔離不同網站，以保護隱私、多重賬戶登錄。
+      note: 本質就是 Cookies 隔離。
+      contents:
+        - publisher: Firefox
+          name: Firefox Multi-Account Containers
+          comment: 多重賬戶登錄（Cookies 隔離）。
+          cost: free
+          tags: ["By Firefox"]
+          licenses: [MPL-2.0]
+          links:
+          - {class: firefox, href: https://addons.mozilla.org/firefox/addon/multi-account-containers/}
+          - {class: github, href: https://github.com/mozilla/multi-account-containers/}
+        - publisher: Firefox
+          name: Facebook Container
+          comment: 隔離 Facebook，阻擋 Facebook 的追蹤器以保護隱私。
+          note: 由於 Meta 家族產品的飛速發展，這個擴充套件可能在運作上會有些問題。
+          cost: free
+          tags: ["By Firefox"]
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/facebook-container/}
+            - {class: github, href: https://github.com/mozilla/contain-facebook}
+        - publisher: kintesh
+          name: Containerise
+          comment: 自動將網站打開在指定的容器中。相比原生，設定更加細緻。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/containerise/}
+            - {class: github, href: https://github.com/kintesh/containerise}
+        - publisher: stoically
+          name: Temporary Containers
+          comment: 自動將網站打開在臨時的容器中。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/temporary-containers/}
+            - {class: github, href: https://github.com/stoically/temporary-containers}
+- name: History - 歷史記錄
+  type: folder
+  id: history
+  contents:
+    - publisher: Armin Sebastian
+      name: Clear Browsing Data
+      comment: 快速清除瀏覽資料。
+      tags: ["AMO Recommended"]
+      cost: free
+      licenses: [GPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/clear-browsing-data/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/clear-browsing-data/bjilljlpencdcpihofiobpnfgcakfdbe}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/clear-browsing-data/milebhdgmnpkhodhblfmgeeadncpnimi}
+        - {class: github, href: https://github.com/dessant/clear-browsing-data}
+    - publisher: sienori
+      name: Tab Session Manager
+      comment: 自動儲存、同步、一鍵復原視窗分頁。
+      cost: free
+      licenses: [MIT]
+      tags: ["AMO Recommended"]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tab-session-manager/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/tab-session-manager/iaiomicjabeggjcfkbimgmglanimpnae/}
+        - {class: homepage, href: https://tab-session-manager.sienori.com/}
+    - publisher: CAD Team
+      name: History-AutoDelete
+      comment: 自動刪除不需要的歷史記錄。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/history-autodelete}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/history-autodelete/bhfakmaiadhflpjloimlagikhodjiefj}
+        - {class: github, href: https://github.com/History-AutoDelete/History-AutoDelete}
+- name: Bookmarks - 書籤
+  type: folder
+  id: bookmarks
+  contents:
+    - publisher: OneTab Team
+      name: OneTab
+      comment: 快速按組收納分頁到列表。用於暫時不看又沒有資格進入書籤的分頁。
+      note: 在 Firefox 上，我更推薦 Tab Stash。
+      cost: free
+      licenses: [Proprietary]
+      tags: ["AMO Recommended"]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/onetab/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/onetab/hoimpamkkoehapgenciaoajfkfkpgfop}
+        - {class: homepage, href: https://www.one-tab.com/}
+    - publisher: Josh Berry
+      name: Tab Stash
+      comment: 快速按組收納分頁到列表。用於暫時不看又沒有資格進入書籤的分頁。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tab-stash/}
+        - {class: homepage, href: https://josh-berry.github.io/tab-stash/}
+        - {class: github, href: https://github.com/josh-berry/tab-stash}
+    - publisher: vaeth
+      name: Bookmark Dupes
+      comment: 尋找和清理重複書籤。
+      cost: free
+      licenses: [GPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/bookmark-dupes/}
+        - {class: github, href: https://github.com/vaeth/bookmarkdupes/}
+    - publisher: Paul Neulinger
+      name: Checkmarks
+      comment: 檢查書籤，加載圖示。
+      cost: free
+      licenses: [GPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/checkmarks-web-ext/}
+        - {class: github, href: https://github.com/tanwald/checkmarks}
+- name: Sync - 同步
+  type: folder
+  id: sync
+  contents:
+    - publisher: Marcel Klehr
+      name: floccus
+      comment: 跨平臺書籤同步。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/floccus/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/floccus/fnaicdffflnofjppbagibeoednhnbjhg}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/gjkddcofhiifldbllobcamllmanombji}
+        - {class: github, href: https://floccus.org/}
+    - publisher: Apple Inc
+      name: iCloud Bookmarks
+      comment: iCloud 書籤同步官方工具。
+      cost: free
+      licenses: [Proprietary]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/icloud-bookmarks/}
+    - publisher: Apple Inc
+      name: iCloud Passwords
+      comment: iCloud 帳密同步官方工具。
+      cost: free
+      licenses: [Proprietary]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/icloud-passwords/}
+- name: Tabs - 分頁管理
+  type: folder
+  id: tabs
+  contents:
+    - publisher: M-Reimer
+      name: Undo Close Tab
+      comment: 給「打開最後關閉的分頁」一個工具列按鈕。如果你跟我一樣記住 [code]Ctrl+Shift+T[/code] 有困難的話：）
+      cost: free
+      tags: ["AMO Recommended"]
+      licenses: [GPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/undoclosetabbutton/}
+        - {class: github, href: https://github.com/M-Reimer/undoclosetab}
+    - publisher: piroor
+      name: Tree Style Tab
+      comment: 以樹狀的形式列出開啟的分頁。如果你跟我一樣幾百萬個分頁沒在關的話：）
+      cost: free
+      tags: ["AMO Recommended"]
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tree-style-tab/}
+        - {class: github, href: https://github.com/piroor/treestyletab}
+        - {class: homepage, href: https://piro.sakura.ne.jp/xul/_treestyletab.html.en}
+      contents:
+        - publisher: piroor
+          name: TST Indent Line
+          comment: Tree Style Tab 的分頁縮排線。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tst-indent-line/}
+    - publisher: erosman
+      name: FoxyTab
+      comment: 增加超多分頁相關便利的操作。
+      cost: free
+      tags: ["AMO Recommended"]
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/foxytab/}
+    - publisher: gildas-lormeau
+      name: SingleFile
+      comment: 將網頁存檔為單一個可完全離線閱讀的 HTML 檔。
+      cost: free
+      tags: ["AMO Recommended"]
+      licenses: [AGPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/single-file/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/efnbkdcfmcmnhlkaijjjmhjjgladedno}
+        - {class: github, href: https://github.com/gildas-lormeau/SingleFile}
+    - publisher: mbnuqw
+      name: Sidebery
+      comment: 側邊欄的多功能分頁管理。
+      cost: free
+      licenses: [MIT]
+      tags: ["AMO Recommended"]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/sidebery/}
+    - publisher: BillK
+      name: Tabby
+      comment: 視窗、分頁管理工具。
+      cost: free
+      licenses: [MPL-2.0]
+      tags: ["AMO Recommended"]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tabby-window-tab-manager/}
+        - {class: github, href: https://github.com/Bill13579/tabby}
+
+    - publisher: Drive4ik
+      name: Simple Tab Groups
+      comment: 帶回傳統的分頁分組功能。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/simple-tab-groups/}
+        - {class: homepage, href: https://github.com/drive4ik/simple-tab-groups}
+    - name: Unload - 卸載分頁
+      type: folder
+      id: unload
+      comment: 卸載但不關閉沒用的分頁以節省記憶體。
+      contents:
+        - publisher: NiklasG
+          name: UnloadTabs
+          comment: 卸載但不關閉沒用的分頁以節省記憶體。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/unload-tabs/}
+            - {class: github, href: https://github.com/NiklasGollenstede/unload-tabs}
+        - publisher: tlintspr
+          name: Auto Tab Discard
+          comment: 「自動的」卸載但不關閉沒用的分頁以節省記憶體。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/auto-tab-discard/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/auto-tab-discard/jhnleheckmknfcgijgkadoemagpecfol}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/nfkkljlcjnkngcmdpcammanncbhkndfe}
+            - {class: homepage, href: https://webextension.org/listing/tab-discard.html}
+    - name: Side View - 側邊欄
+      type: folder
+      id: sideview
+      contents:
+        - publisher: Firefox
+          name: Side View
+          comment: 在側邊欄打開頁面。Firefox 官方出品。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/side-view/}
+        - publisher: Afnan Khan
+          name: Open in Sidebar
+          comment: 在側邊欄打開頁面。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/open-link-in-sidebar/}
+    - name: Popup - 彈出式視窗
+      type: folder
+      id: popup
+      contents:
+        - publisher: ettoolong
+          name: Popup Window
+          comment: 用沒有工具列的簡潔的彈出式視窗打開分頁。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/popup-window/}
+            - {class: github, href: https://github.com/ettoolong/PopupWindow}
+        - publisher: ettoolong
+          name: Popup Video
+          comment: 用沒有工具列的簡潔的彈出式視窗打開影片。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/popup-video-webextension/}
+            - {class: github, href: https://github.com/ettoolong/PopupVideo}
+    - name: Reload - 刷新
+      type: folder
+      id: reload
+      contents:
+        - publisher: Ronen Zilberman
+          name: Check4Change
+          comment: 自動刷新網頁檢查變更。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/check4change/}
+            - {class: homepage, href: https://www.check4change.com/}
+        - publisher: James Fray
+          name: Tab Reloader
+          comment: 自動刷新網頁。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tab-reloader/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/tab-reloader/dejobinhdiimklegodgbmbifijpppopn}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/amclpbiglkmdhodbgnchnkmfdghnabik}
+            - {class: safari, href: https://apps.apple.com/app/tab-reloader/id6743345681}
+            - {class: homepage, href: https://webextension.org/listing/tab-reloader.html}
+        - publisher: sneakypete81
+          name: Update Scanner
+          comment: 自動檢查網頁更新並通知。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/update-scanner/}
+            - {class: homepage, href: https://sneakypete81.github.io/updatescanner/}
+- name: Appearances - 外觀
+  type: folder
+  id: appearances
+  contents:
+    - publisher: Firefox
+      name: Firefox Color
+      comment: 快速客製化 Firefox 瀏覽器的外觀。
+      cost: free
+      tags: ["By Firefox"]
+      licenses: [MPL-2.0]
+      links:
+      - {class: firefox, href: https://addons.mozilla.org/firefox/addon/firefox-color/}
+      - {class: homepage, href: https://color.firefox.com/}
+      - {class: github, href: https://github.com/mozilla/FirefoxColor/}
+    - publisher: Dark Reader
+      name: Dark Reader
+      tags: ["AMO Recommended", "Firefox for Android"]
+      comment: 為每個網頁開啟夜間＼黑暗模式。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/darkreader/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/ifoakfbpdcdoeenechcleahebpibofpc}
+        - {class: safari, href: https://apps.apple.com/us/app/dark-reader-for-safari/id1438243180}
+        - {class: homepage, href: https://darkreader.org/}
+        - {class: github, href: https://github.com/darkreader/darkreader}
+    - publisher: Catppuccin
+      name: Catppuccin for Web File Explorer Icons
+      comment: 為一些網站的檔案預覽提供 Catppuccin 主題圖示。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/catppuccin-web-file-icons/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/catppuccin-for-web-file-e/lnjaiaapbakfhlbjenjkhffcdpoompki}
+        - {class: homepage, href: https://catppuccin.com/}
+        - {class: github, href: https://github.com/catppuccin/web-file-explorer-icons}
+    - publisher: Cimbali
+      name: Toggle color schemes
+      comment: 根據系統主題自動切換網站的淺色＼深色模式。
+      note: 如果那個網站支援的話。
+      cost: free
+      licenses: [WTFPL]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/toggle-dark-mode/}
+        - {class: github, href: https://github.com/Cimbali/toggle-dark-mode}
+    - publisher: fkohrt
+      name: Activate Reader View
+      comment: 強制打開閱讀模式。
+      note: 如果那個網站「不」支援的話。可是通常強制打開都顯示不出來拉。
+      cost: free
+      licenses: [Apache-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/activate-reader-view/}
+    - publisher: Tulirebane
+      name: Desaturate Favicons
+      comment: 讓不活躍的分頁圖示變暗。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/firefox-desaturate-favicons/}
+        - {class: github, href: https://github.com/Madis0/firefox-desaturate-favicons}
+    - publisher: Wolfgang Faust
+      name: IdentFavIcon Quantum
+      comment: 為沒有 Favicon 的網站自動產生圖示。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/identfavicon-quantum/}
+        - {class: github, href: https://github.com/wolfgang42/identfavicon-quantum}
+    - publisher: Anush Veeranala
+      name: Rename Tab Title
+      comment: 客製化網頁標題。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/rename-tab-title/}
+    - publisher: Lazyuki
+      name: Tab ReTitle
+      comment: 客製化網頁標題。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tab-retitle/}
+        - {class: github, href: https://github.com/Lazyuki/ReTitle}
+    - publisher: Wesley Branton
+      name: Custom Scrollbars
+      comment: 客製化滾動條。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/activate-reader-view/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/custom-scrollbars/ddbipglapfjojhfapmpmofnaoellkggc}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/custom-scrollbars/lbndfndhkcagjkndlnpllplacpfmbpbk}
+        - {class: github, href: https://github.com/WesleyBranton/Custom-Scrollbar}
+        - {class: homepage, href: https://wesleybranton.com/}
+    - name: New Tabs - 新分頁
+      type: folder
+      id: newtabs
+      comment: 自訂新分頁的內容與外觀。此類擴充套件非常實用、非常的多、也非常看個人口味，以下僅列出幾個比較受歡迎的選項供參考。
+      note: 可以直接到 AlternativeTo 上看相關的[url=https://alternativeto.net/category/online-services/personal-homepage/?license=opensource]分類列表[/url]。
+      contents:
+        - publisher: Sören Hentzschel
+          name: New Tab Override
+          comment: 更細緻的新分頁設定。
+          cost: free
+          licenses: [MPL-2.0]
+          tags: ["AMO Recommended"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/new-tab-override/}
+        - publisher: joelshepherd
+          name: Tabliss
+          comment: 好看、可客製化的預設新分頁。
+          cost: free
+          licenses: [GPL-3.0]
+          tags: ["AMO Recommended"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/onetab/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/lklaendlmlfkaabeleddanafeinnenih}
+            - {class: homepage, href: https://tabliss.io/}
+            - {class: github, href: https://github.com/joelshepherd/tabliss/}
+        - publisher: George
+          name: Blooft
+          comment: 好看、可客製化的預設新分頁。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/blooft-new-tab/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/blooft-beautiful-new-tab/fpdjjjmglibdjocjpcchgkbakeelaghm}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/blooft-beautiful-new-ta/pldehmgohfonmgglijmfppbhbfghiace}
+            - {class: github, href: https://github.com/thingbomb/thingbomb}
+            - {class: homepage, href: https://www.blooft.com/}
+        - publisher: George
+          name: Bonjourr
+          comment: 好看、可客製化的預設新分頁。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/bonjourr-startpage/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/bonjourr-%C2%B7-minimalist-lig/dlnejlppicbjfcfcedcflplfjajinajd}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/bonjourr/dehmmlejmefjphdeoagelkpaoolicmid}
+            - {class: safari, href: https://apps.apple.com/app/bonjourr-startpage/id1615431236}
+            - {class: github, href: https://github.com/victrme/Bonjourr}
+            - {class: homepage, href: https://bonjourr.fr/}
+        - publisher: OlegWock
+          name: Anori
+          comment: 功能豐富的預設新分頁，讓新分頁就像手機上的工具小部件一樣。
+          cost: free
+          licenses: [AGPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/anori/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/anori/ddeaekifelikgnaacipabpmjpffgifek}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/anori-productivity-new-t/hhmmmnlcbiambakodajpbmgicigdajjo}
+            - {class: github, href: https://github.com/OlegWock/anori}
+            - {class: homepage, href: https://anori.app/}
+        - publisher: rubenwardy
+          name: Renewed Tab
+          comment: 功能豐富的預設新分頁。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/renewed-tab/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/renewed-tab/laljofodhebajcajogbolahbjdcnfgkf}
+            - {class: github, href: https://github.com/rubenwardy/renewedtab}
+            - {class: homepage, href: https://renewedtab.com/}
+        - publisher: Mue
+          name: Mue
+          comment: 功能豐富的預設新分頁。
+          cost: free
+          licenses: [BSD-3-Clause]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/mue/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/mue/bngmbednanpcfochchhgbkookpiaiaid}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/mue/aepnglgjfokepefimhbnibfjekidhmja}
+            - {class: homepage, href: https://muetab.com/}
+        - publisher: ibillingsley
+          name: Humble New Tab Page
+          comment: 書籤導向的預設新分頁。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/humble-new-tab/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/mfgdmpfihlmdekaclngibpjhdebndhdj}
+            - {class: github, href: https://github.com/ibillingsley/HumbleNewTabPage}
+- name: Feeds - 訂閱
+  type: folder
+  note: A.K.A. RSS / Atom 閱讀管理器
+  id: feeds
+  contents:
+    - publisher: Nobuyuki Honda
+      name: Feed Indicator
+      comment: 偵測訂閱源。
+      cost: free
+      licenses: [Zlib]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/feed-indicator/}
+        - {class: homepage, href: https://www.nk2.org/amo.html}
+    - publisher: nt1m
+      name: Livemarks
+      comment: 帶回傳統的功能，把 Feed 訂閱作為書籤。
+      cost: free
+      licenses: [MIT]
+      tags: ["AMO Recommended"]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/livemarks/}
+        - {class: github, href: https://github.com/nt1m/livemarks/}
+    - publisher: Adam Sanderson
+      name: Brook Feed Reader
+      comment: 在側邊欄中的 RSS 聚合、閱讀器。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/brook-feed-reader/}
+        - {class: github, href: https://github.com/adamsanderson/brook}
+    - publisher: Feedbro
+      name: Feedbro
+      comment: RSS 聚合、閱讀器。
+      tags: ["AMO Recommended"]
+      cost: free
+      licenses: [Proprietary]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/feedbroreader/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/feedbro/mefgmmbdailogpfhfblcnnjfmnpnmdfa}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/feedbro/pdfbckdfhgaohcfdkcgpggcifmalimfd}
+        - {class: homepage, href: https://nodetics.com/feedbro/}
+- name: Copy and Paste - 複製與貼上
+  type: folder
+  id: copypaste
+  contents:
+    - publisher: piro
+      name: Copy Selected Tabs to Clipboard
+      comment: 複製分頁連結到剪貼板，支援多種格式。（右鍵 Tabs 操作。）
+      note: 和 Tree Style Tab 師出同門。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/copy-selected-tabs-to-clipboar/}
+        - {class: github, href: https://github.com/piroor/copy-selected-tabs-to-clipboard}
+    - publisher: deathau
+      name: MarkDownload
+      comment: 以 Markdown 格式擷取整個網頁。
+      cost: free
+      licenses: [Apache-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/markdownload/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/markdownload-markdown-web/pcmpcfapbekmbjjkdalcgopdkipoggdi}
+        - {class: safari, href: https://apple.co/3tcU0pD}
+        - {class: github, href: https://github.com/deathau/markdownload}
+    - publisher: yorkxin
+      name: Copy as Markdown
+      comment: 以 Markdown 格式拷貝鏈接、分頁、圖片。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/copy-as-markdown/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/copy-as-markdown/fkeaekngjflipcockcnpobkpbbfbhmdn}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/copy-as-markdown/cbbdkefgbfifiljnnklfhnhcnlmpglpd}
+        - {class: github, href: https://github.com/yorkxin/copy-as-markdown}
+    - publisher: erosman
+      name: Copy PlainText
+      comment: 以無格式拷貝文字。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/copy-plaintext/}
+    - publisher: Absolute
+      name: Absolute Enable Right Click & Copy
+      comment: 強制啟用滑鼠右鍵選單和拷貝功能。
+      cost: free
+      licenses: [BSD-2-Clause]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/absolute-enable-right-click/}
+    - publisher: Langenscheiss
+      name: BibItNow
+      comment: 給任意網頁生成 BibTeX 引用條目，方便學術引用。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/bibitnow/}
+        - {class: github, href: https://github.com/Langenscheiss/bibitnow}
+- name: Download Managers - 下載管理
+  type: folder
+  id: downloads
+  contents:
+    - publisher: Nils Maier
+      name: DownThemAll
+      comment: 強大的下載管理器，支援多線程下載與批量下載。
+      cost: free
+      licenses: [GPL-2.0]
+      tags: ["AMO Recommended"]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/downthemall/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/downthemall/nljkibfhlpcnanjgbnlnbjecgicbjkge}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/downthemall/kenmkleahlilpehjignjigpdhciknmdf}
+        - {class: homepage, href: https://www.downthemall.org/}
+    - publisher: Ross Wang
+      name: Aria2 Download Manager Integration
+      comment: 用 Aria2 下載檔案。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/aria2-integration/}
+        - {class: github, href: https://github.com/RossWang/Aria2-Integration}
+- name: Language - 語言
+  type: folder
+  id: language
+  contents:
+    - publisher: Tong Wen Tang
+      name: New Tong Wen Tang
+      comment: 新同文堂，繁體簡體中文轉換工具。
+      licenses: [MIT]
+      cost: free
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/new_tongwentang/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/new-tongwentang/ldmgbgaoglmaiblpnphffibpbfchjaeg}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/%E6%96%B0%E5%90%8C%E6%96%87%E5%A0%82/ijddgmclgedepadbikmfekambhhfjfnl}
+        - {class: github, href: hhttps://github.com/tongwentang/tongwentang-extension}
+    - publisher: kuanyui
+      name: Furiganaize
+      comment: 在日文網頁上顯示假名注音（ふりがな）。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/furiganaize/}
+        - {class: github, href: https://github.com/kuanyui/Furiganaize}
+    - publisher: Grammarly
+      name: Grammarly
+      comment: 英文文法拼字檢查。
+      cost: paid
+      licenses: [Proprietary]
+      links:
+        - {class: homepage, href: https://app.grammarly.com/}
+    - name: Translation - 翻譯
+      type: folder
+      id: translation
+      contents:
+        - publisher: DeepL
+          name: DeepL
+          comment: DeepL 翻譯服務官方擴充套件。
+          licenses: [Proprietary]
+          cost: freemium
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/zh-CN/firefox/addon/deepl-translate/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/deepl-translate-reading-w/cofdbpoegempjloogbagkncekinflcnj}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/deepl-translate-reading-/fancfknaplihpclbhbpclnmmjcjanbaf}
+            - {class: github, href: https://www.deepl.com/}
+        - publisher: sienori
+          name: Simple Translate
+          comment: 選中文字立即翻譯。與 Tab Session Manager 師出同門。
+          licenses: [MPL-2.0]
+          cost: free
+          tags: ["AMO Recommended"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/simple-translate/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/simple-translate/ibplnjkanclpjokhdolnendpplpjiace}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/cllnohpbfenopiakdcjmjcbaeapmkcdl}
+            - {class: github, href: https://github.com/itsecurityco/to-google-translate}
+        - publisher: Filipe Dev
+          name: TWP - Translate Web Pages
+          comment: 選中文字立即翻譯。
+          licenses: [MPL-2.0]
+          cost: free
+          tags: ["AMO Recommended"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/}
+            - {class: github, href: https://github.com/FilipePS/Traduzir-paginas-web/}
+        - publisher: Juan Escobar
+          name: To Google Translate
+          comment: 快速使用 Google 翻譯。
+          licenses: [MPL-2.0]
+          cost: free
+          tags: ["AMO Recommended"]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/to-google-translate/}
+            - {class: github, href: https://github.com/itsecurityco/to-google-translate}
+- name: Media - 媒體
+  type: folder
+  id: media
+  contents:
+    - publisher: Ruffle
+      name: Ruffle
+      comment: Flash Player 模擬器，讓你能在現代瀏覽器上播放 Flash 內容。
+      note: Ruffle 仍在積極開發中，並非所有 Flash 內容都能正常運作。
+      tags: ["Firefox for Android"]
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/ruffle_rs/}
+        - {class: homepage, href: https://ruffle.rs/}
+    - publisher: Muyor
+      name: Audio Equalizer
+      comment: 音訊均衡器。
+      tags: ["AMO Recommended"]
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/audio-equalizer-wext/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/audio-equalizer/cjadmgobonfhilogbdgkkhnoojpgenfg}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/llmdihadkpnnhddpghpcdaepfpkgnjme}
+        - {class: homepage, href: https://mybrowseraddon.com/audio-equalizer.html}
+    - publisher: Val Packett
+      name: SoundFixer
+      comment: 調整影片的音頻。
+      cost: free
+      licenses: [Unlicense]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/soundfixer/}
+        - {class: github, href: https://github.com/valpackett/soundfixer}
+- name: Google Services - Google 服務強化
+  type: folder
+  id: google
+  contents:
+    - publisher: sarahavilov
+      name: Shortcuts for Google Products
+      comment: Google 服務快速啟動按鈕。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/google-shortcuts/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/google-shortcuts/pdlecffodcfabchelafoljcdphfpkpcl}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/lemjjheiicoobcmhaecfecpccjnjmemd}
+        - {class: homepage, href: https://webextension.org/listing/google-shortcuts.html}
+        - {class: github, href: https://github.com/sarahavilov/google-shortcuts/}
+    - publisher: Alex Verstak
+      name: Google Scholar Button
+      comment: 在任何網頁上快速使用 Google Scholar 搜尋學術文章。
+      cost: free
+      tags: ["Firefox for Android"]
+      licenses: [Proprietary]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/google-scholar-button/}
+    - publisher: wisniewskit
+      name: Google Search Fixer
+      comment: 改善 Google 搜尋在 Firefox Android 上的體驗。
+      cost: free
+      tags: ["AMO Recommended", "Firefox for Android"]
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/android/addon/google-search-fixer/}
+        - {class: github, href: https://github.com/wisniewskit/google-search-fixer}
+    - name: YouTube - YouTube 強化
+      type: folder
+      id: youtube
+      contents:
+        - publisher: feller
+          name: YouTube Video and Audio Downloader
+          comment: 下載 YouTube 的影片。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube_downloader_webx/}
+            - {class: homepage, href: https://technologyto.com/extractor.html}
+        - publisher: Ryan Thaut
+          name: YouTube Popout Player
+          comment: 用沒有工具列的簡潔的彈出式視窗打開 YouTube 影片。
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube-popout-player/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/youtube-popout-player/kmfikkopdhmbdbkndkamabamlkkgkpod}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/youtube-popout-player/mdhpmdbgkogobnebpgfbnnnbjfohiiee}
+            - {class: homepage, href: https://rthaut.github.io/YouTubePopoutPlayer/}
+        - publisher: Baris Derin
+          name: YouTube High Definition
+          comment: YouTube 鎖定高畫質、播放速率、音量等設定。
+          tags: ["AMO Recommended", "Firefox for Android"]
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube-high-definition/}
+            - {content: 本站介紹, href: https://undecv.github.io/blog/posts/youtube-tips/youtube-high-definition/}
+        - publisher: Dmitry Selivanov
+          name: Return YouTube Dislike
+          comment: 在 YouTube 上把 討厭數 還給你。
+          tags: ["AMO Recommended",]
+          cost: free
+          licenses: [GPL-3.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/return-youtube-dislikes/}
+            - {class: chrome , href: https://chromewebstore.google.com/detail/return-youtube-dislike/gebbhagfogifgggkldgodflihgfeippi}
+            - {class: edge, href: https://chromewebstore.google.com/detail/return-youtube-dislike/gebbhagfogifgggkldgodflihgfeippi}
+            - {class: homepage, href: https://returnyoutubedislike.com/}
+        - publisher: MRFDEV
+          name: Enhancer for YouTube
+          comment: YouTube 介面與行為優化。功能豐富宛如瑞士軍刀。
+          cost: free
+          licenses: [Proprietary]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/enhancer-for-youtube}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/enhancer-for-youtube%E2%84%A2/dlgfaleeejmphhnemjgiaekdbonkagkd}
+            - {class: homepage, href: https://www.mrfdev.com/enhancer-for-youtube}
+        - publisher: InzkDev
+          name: Tweaks for YouTube
+          comment: YouTube 介面與行為優化。功能豐富宛如瑞士軍刀。
+          cost: freemium
+          licenses: [Proprietary]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/your-codecs/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/tweaks-for-youtube/ogkoifddpkoabehfemkolflcjhklmkge}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/tweaks-for-youtube/nnhifoobfibjmlkejadjmcdckkjbljcp}
+            - {class: homepage, href: https://inzk.dev/tweaks-for-youtube/}
+        - publisher: RedByte
+          name: YouTube for TV
+          comment: 用瀏覽器打開 youtube.com/tv 電視版 YouTube。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube-for-tv/}
+        - publisher: lawfx
+          name: YouTube NonStop
+          comment: 防止 YouTube 自動暫停播放。根本停不下來。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube-nonstop/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/youtube-nonstop/nlkaejimjacpillmajjnopmpbkbnocid}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/youtube-nonstop/lgakodbaikpcnfpmanpenlgaghdaifbm}
+            - {class: github, href: https://github.com/lawfx/YoutubeNonStop}
+        - publisher: pg
+          name: YouTube Auto Like
+          comment: 自動為 YouTube 影片點一個大大的喜歡。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube_auto_like/}
+            - {class: github, href: https://github.com/Taknok/youtube-auto-like}
+        - publisher: Frank0945
+          name: fix-yt-traditional-chinese-subtitle
+          comment: 修正 YouTube 繁體中文字幕。
+          cost: free
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube-%E7%B9%81%E9%AB%94%E8%87%AA%E5%8B%95%E7%BF%BB%E8%AD%AF%E4%BF%AE%E6%AD%A3/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/youtube-%E7%B9%81%E9%AB%94%E8%87%AA%E5%8B%95%E7%BF%BB%E8%AD%AF%E4%BF%AE%E6%AD%A3/nghlhmhjdlbcgnmjffpeialapbcnajig}
+            - {class: github, href: https://github.com/Frank0945/fix-yt-traditional-chinese-subtitle}
+        - publisher: Dima Nabok
+          name: PocketTube
+          comment: YouTube 訂閱管理器。
+          cost: freemium
+          licenses: [MPL-2.0]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/youtube-subscription-groups/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/pockettube-youtube-subscr/kdmnjgijlmjgmimahnillepgcgeemffb}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/pockettube-youtube-subsc/klfeohnijmogpjoeenglhonjfiacajpp}
+            - {class: safari, href: https://apps.apple.com/us/app/pockettube-for-safari/id1533703891}
+            - {class: homepage, href: https://pockettube.io/}
+        - publisher: erkserkserks
+          name: h264ify
+          comment: YouTube 鎖定編碼設定。
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/h264ify/}
+            - {class: chrome, href: https://chromewebstore.google.com/detail/h264ify/aleakchihdccplidncghkekgioiakgal}
+            - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/h264ify/ldjamdlpbjpcfagnckgipdjiamhdcnbd}
+            - {class: github, href: https://github.com/erkserkserks/h264ify}
+        - publisher: undecV
+          name: YourCodecs
+          comment: YouTube 鎖定編碼設定。
+          tags: ["我的作品"]
+          cost: free
+          licenses: [MIT]
+          links:
+            - {class: firefox, href: https://addons.mozilla.org/firefox/addon/your-codecs/}
+            - {class: github, href: https://github.com/undecV/YourCodecs}
+- name: Other Services - 其他服務強化
+  type: folder
+  id: services
+  contents:
+    - publisher: Armin Sebastian
+      name: Web Archives
+      comment: 快速的搜尋 Web Archives 網頁快照。
+      tags: ["AMO Recommended"]
+      cost: free
+      licenses: [GPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/view-page-archive/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/web-archives/apcfghlggldjdjepjnahfdjgdcdekhda}
+        - {class: github, href: https://github.com/dessant/web-archives}
+    - publisher: Armin Sebastian
+      name: Search by Image
+      comment: 快速的以圖搜尋。
+      tags: ["AMO Recommended"]
+      cost: free
+      licenses: [GPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/search_by_image/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/search-by-image/hckehkfhdkpmdlonmjaagiodlpjbonmc}
+        - {class: github, href: https://github.com/dessant/search-by-image}
+    - publisher: SteamDB
+      name: SteamDB
+      comment: Steam 歷史價格個其他資訊。
+      cost: free
+      licenses: [BSD-3-Clause]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/steam-database/}
+        - {class: homepage, href: https://steamdb.info/extension/}
+        - {class: github, href: https://github.com/SteamDatabase/BrowserExtension}
+- name: Network - 網路
+  type: folder
+  id: network
+  contents:
+    - publisher: Einar Egilsson
+      name: Redirector
+      tags: ["Firefox for Android"]
+      comment: 自訂 URL 重定向規則。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/redirector/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/redirector/ocgpenflpmgnfapjedencafcfakcekcd}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/redirector/jdhdjbcalnfbmfdpfggcogaegfcjdcfp}
+        - {class: homepage, href: https://einaregilsson.com/redirector/}
+    - publisher: FoxyProxy
+      name: FoxyProxy Standard
+      comment: 功能強大的代理設定。
+      tags: ["AMO Recommended"]
+      cost: free
+      licenses: [GPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/foxyproxy-standard/}
+        - {class: homepage, href: https://getfoxyproxy.org/}
+        - {class: github, href: https://github.com/foxyproxy/firefox-extension}
+    - publisher: callahad
+      name: Quick Accept-Language Switcher
+      comment: 快速切換網頁請求中 Accept-Language。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/quick-accept-language-switc/}
+        - {class: github, href: https://github.com/callahad/quick-accept-language-switcher}
+    - publisher: Linder
+      name: User-Agent Switcher
+      comment: 快速切換網頁請求中 User-Agent。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/user-agent-switcher-revived/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/user-agent-switcher/dbclpoekepcmadpkeaelmhiheolhjflj}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/ipacohcfiahhblhbpdnnmnolcakgooci}
+        - {class: homepage, href: https://mybrowseraddon.com/useragent-switcher.html}
+    - publisher: Ray
+      name: User-Agent Switcher and Manager
+      comment: 快速切換網頁請求中 User-Agent。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/user-agent-string-switcher/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/user-agent-switcher/bhchdcejhohfmigjafbampogmaanbfkg}
+        - {class: edge, href: https://addons.mozilla.org/firefox/addon/user-agent-string-switcher/}
+        - {class: gitlab, href: https://webextension.org/listing/useragent-switcher.html}
+- name: UserScripts - 使用者腳本
+  comment: 用於自訂網頁行為與外觀的 JavaScript 腳本。
+  type: folder
+  id: userscripts
+  contents:
+    - publisher: Anthony Lieuallen
+      name: Greasemonkey
+      comment: UserScript 元祖，UserScripts 被稱作油猴腳本就是因為它。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/greasemonkey/}
+        - {class: homepage, href: https://www.greasespot.net/}
+    - publisher: Jan Biniok
+      name: Tampermonkey
+      comment: 跨平臺、現代化的 UserScript 管理器。
+      cost: free
+      licenses: [Proprietary]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/tampermonkey/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd}
+        - {class: safari, href: https://apps.apple.com/app/tampermonkey/id6738342400}
+        - {class: homepage, href: https://www.tampermonkey.net/}
+    - publisher: Violentmonkey
+      name: Violentmonkey
+      comment: 開源的、跨平臺、現代化的 UserScript 管理器。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/violentmonkey/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao}
+        - {class: homepage, href: https://violentmonkey.github.io/}
+- name: UserStyles - 使用者樣式
+  type: folder
+  id: userstyles
+  comment: 用於自訂網頁外觀的 CSS 樣式。
+  contents:
+    - publisher: Stylus Team
+      name: Stylus
+      tags: ["AMO Recommended"]
+      comment: UserStyle 客製外觀。
+      cost: free
+      licenses: [GPL-3.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/styl-us/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne}
+        - {class: github, href: https://add0n.com/stylus.html}
+- name: Developers - 開發者工具
+  type: folder
+  id: developers
+  contents:
+    - publisher: BlackGlory
+      name: Favicon Detector
+      comment: 檢測並顯示網站的 Favicon。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/favicon-detector/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/jlfeffjhgmgblofcgpbgpkkhfniipejm}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/favicon-detector/kmlcolmkcjbpagopgiojkflkejfnnjbm}
+        - {class: github, href: https://github.com/BlackGlory/favicon-detector}
+    - publisher: apiaget
+      name: Open Graph Preview
+      comment: 預覽並除錯 Open Graph 標籤。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/open-graph-preview-and-debug/}
+    - publisher: mjfroman
+      name: DevTools Media Panel
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/devtools-media-panel/}
+        - {class: github, href: https://github.com/mjfroman/media-devtools-panel-react}
+    - publisher: Pranay Joshi
+      name: Debug CSS
+      comment: 顯示元件邊框。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/pranay-joshi/}
+- name: Utilities - 其他實用工具
+  type: folder
+  id: utilities
+  contents:
+    - publisher: Adam Pritchard
+      name: Markdown Here
+      comment: 用 Markdown 編寫郵件。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/markdown-here/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/elifhakcjgalahccnjkneoccemfahfoa}
+        - {class: homepage, href: https://markdown-here.com/}
+        - {class: github, href: https://github.com/adam-p/markdown-here}
+    - publisher: AutomaApp
+      name: Automa
+      comment: 免程式自動化。
+      cost: freemium
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/automa/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/automa/infppggnoaenmfagbfknfkancpbljcca}
+        - {class: homepage, href: https://github.com/AutomaApp/automa}
+    - publisher: Oleksandr
+      name: Forecastfox
+      comment: 天氣預報。介面略微復古但資訊豐富。
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/forecastfox/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/forecastfox/hhodnpljldlmcdgielblijcfppncjogf}
+        - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/forecastfox/eknchljdflmbpgddnimoflhegdacbinj}
+        - {class: homepage, href: https://www.s3blog.org/forecastfox.html}
+    - publisher: Oleksandr
+      name: Worldwide Radio
+      comment: 全世界的廣播電台。
+      note: 時代的眼淚，沒剩下幾臺能聽的了...
+      cost: free
+      licenses: [MPL-2.0]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/worldwide-radio/}
+    - publisher: Andy McDonald
+      name: FoxClocks
+      comment: 世界時鐘。介面略微復古。
+      cost: free
+      licenses: [Proprietary]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/foxclocks/}
+        - {class: chrome, href: https://chromewebstore.google.com/detail/foxclocks/obcbigljfpgappaaofailjjoabiikckk}
+        - {class: homepage, href: https://foxclocks.org/}
+    - publisher: rugk
+      name: Offline QR Code Generator
+      comment: 離線 QR Code 產生器。
+      cost: free
+      licenses: [MIT]
+      links:
+        - {class: firefox, href: https://addons.mozilla.org/firefox/addon/offline-qr-code-generator/}
+        - {class: github, href: https://github.com/rugk/offline-qr-code}
+
+
+# - publisher: keifufu
+#   name: WebNowPlaying
+#   comment: 將正在播放的音樂資訊傳送到外部，例如 Rainmeter。
+#   note: 需要配合外部應用程式使用。
+#   cost: free
+#   licenses: [MIT]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/webnowplaying}
+#     - {class: chrome, href: https://chromewebstore.google.com/detail/webnowplaying/jfakgfcdgpghbbefmdfjkbdlibjgnbli}
+#     - {class: github, href: https://github.com/keifufu/WebNowPlaying}
+# - publisher: vdh
+#   name: Video DownloadHelper
+#   comment: 影片下載工具。
+#   cost: free
+#   licenses: [MIT]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/video-downloadhelper/}
+#     - {class: homepage, href: https://v10.downloadhelper.net/en-US}
+
+# - publisher: asamuzaK
+#   name: Copy URL To Clipboard
+#   comment: 複製連結到剪貼板，支援多種格式。（在右上角圖示操作。）
+#   cost: free
+#   licenses: [MPL-2.0]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/url2clipboard/}
+#     - {class: chrome, href: https://chromewebstore.google.com/detail/copy-url-to-clipboard/miancenhdlkbmjmhlginhaaepbdnlllc}
+#     - {class: github, href: https://github.com/asamuzaK/url2clipboard}
+# - publisher: toshi
+#   name: CopyTabTitleUrl
+#   comment: 複製連結到剪貼板，支援多種格式。（在右上角圖示操作。）
+#   cost: free
+#   licenses: [MIT]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/copytabtitleurl/}
+#     - {class: chrome, href: https://chromewebstore.google.com/detail/copytabtitleurl/lmgbdjfoaihhgdphombpgjpaohjfeapp}
+#     - {class: github, href: https://github.com/k08045kk/CopyTabTitleUrl}
+# - publisher: Distill
+#   name: Distill Web Monitor
+#   comment: 自動刷新網頁檢查變更，並且想盡辦法通知你。
+#   cost: freemium
+#   licenses: [Proprietary]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/distill-web-monitor-ff/}
+#     - {class: homepage, href: https://distill.io/}
+# - publisher: Disconnect
+#   name: Disconnect
+#   comment: 阻擋追蹤器。
+#   cost: freemium
+#   licenses: [GPL-3.0]
+#   tags: ["AMO Recommended"]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/disconnect/}
+#     - {class: chrome, href: https://chromewebstore.google.com/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo?hl=en}
+#     - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/disconnect/mhmnkijlpopapacpincpbbaeldcgokcp}
+#     - {class: homepage, href: https://disconnect.me/}
+# - publisher: ntninja
+#   name: User Agent Switcher
+#   comment: 快速切換網頁請求中 User-Agent。
+#   cost: free
+#   licenses: [GPL-3.0]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/uaswitcher/}
+#     - {class: gitlab, href: https://gitlab.com/ntninja/user-agent-switcher}
+# - publisher: Pushbullet
+#   name: Pushbullet
+#   comment: 傳送分頁、訊息、或任何東西到手機或是其他設備。
+#   cost: freemium
+#   licenses: [Proprietary]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/pushbullet/}
+#     - {class: homepage, href: https://www.pushbullet.com/apps}
+# - publisher: Octotree
+#   name: Octotree
+#   comment: 以樹的方式展示 GitHub 的 Repo 的檔案。
+#   licenses: [Proprietary]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/octotree/}
+#     - {class: chrome, href: https://chromewebstore.google.com/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc}
+#     - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/octotree/joagmknfcgpikbadjkaikmnhpjadihjg}
+#     - {class: safari, href: https://itunes.apple.com/us/app/octotree-pro/id1457450145}
+#     - {class: homepage, href: https://www.octotree.io/}
+# - publisher: Andy Portmen
+#   name: Country Flags & IP Whois
+#   comment: 在工具列顯示網站伺服器所在國家的國旗，並提供相關資訊與工具。
+#   note: 由於此類擴充套件的特性，必然向第三方傳送請求以獲取 IP 資訊，請自行評估隱私風險。而且由於 CDN 的普及，此類資訊的準確性可能受影響。
+#   cost: free
+#   licenses: [MPL-2.0]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/country-flags-ip-whois/}
+#     - {class: chrome, href: https://chromewebstore.google.com/detail/country-flags-ip-whois/bffjckjhidlcnenenacdahhpbacpgapo}
+#     - {class: edge, href: https://microsoftedge.microsoft.com/addons/detail/hmkmedgmocnmelekbdpogdpednpfjdne}
+#     - {class: homepage, href: https://webextension.org/listing/country-flags.html}
+#     - {class: github, href: https://github.com/andy-portmen/country-flags}
+# - publisher: Dave G
+#   name: Flagfox
+#   tags: ["AMO Recommended"]
+#   comment: 在工具列顯示網站伺服器所在國家的國旗，並提供相關資訊與工具。
+#   note: 由於此類擴充套件的特性，必然向第三方傳送請求以獲取 IP 資訊，請自行評估隱私風險。而且由於 CDN 的普及，此類資訊的準確性可能受影響。
+#   cost: free
+#   licenses: [Proprietary]
+#   links:
+#     - {class: firefox, href: https://addons.mozilla.org/firefox/addon/flagfox/}
+#     - {class: homepage, href: https://flagfox.wordpress.com/}

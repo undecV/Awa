@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../schemas/awa.1.0.0.schema.json
+
+meta:
+  versions:
+    - {version: "6.0.0", datetime: "2025-08-05", note: ""}
+  flags: [Abandon, Discontinued, Abandon, Pro, Bundle]  # For filter
+
+contents:
+  - name: 網路衝浪必備瀏覽器
+    id: browser  # For html element id
+    type: folder
+    contents:
+      - publisher: Mozilla
+        name: Firefox
+        price: free  # enum[free, freemium, paid]
+        license: [MPL-2.0]  # SPDX
+        platforms: [windows, linux, macos]  # Reserved
+        architectures: [amd64, arm64]  # Reserved
+        locale: ["zh-TW", "en-US"]
+        tags: []
+        flags: []  # For filter
+        icon: "https://examole.com/icon.ico"  # Reserved, link to the icon file.
+        description: "全世界最好的網頁瀏覽器！"  # Reserved, only show in this Manifest
+        comment: "我最喜歡的瀏覽器，不用不是我朋友。"  # Render in page
+        note: "超棒！"  # Reserved, may render in tooltip
+        links:
+          # 渲染成 <a class="link-homepage" href="...">官方網站</a>
+          - {class: homepage, href: "https://www.mozilla.org/firefox/", content: "官方網站"}
+          - {class: winget-run, href: "https://winget.run/pkg/Mozilla/Firefox"}
+          - {class: msstore, href: "https://apps.microsoft.com/detail/9NKSQGP7F2NH"}
+        install:
+          # 渲染成 <a class="install-winget" href="...">...</a>
+          - {class: winget, content: "winget install -e --id \"Mozilla.Firefox\""}
+          - {class: scoop, content: "scoop install extras/firefox"}
+          - {class: msstore, href: "ms-windows-store://pdp/?productid=9NKSQGP7F2NH"}
+          - {class: download, href: https://download.mozilla.org/?product=firefox-latest&os=win64&lang=zh-TW}
+        contents:
+          - publisher: Mozilla
+            name: Firefox Relay  # 擴充套件之類的會作為子項目出現xian

@@ -1,0 +1,25 @@
+[project]
+name = "awa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "bbcode>=1.1.0",
+    "jinja2>=3.1.6",
+    "markupsafe>=3.0.3",
+    "minify-html>=0.18.1",
+    "python-frontmatter>=1.1.0",
+    "pyyaml>=6.0.3",
+    "rich>=14.3.1",
+]
+
+[dependency-groups]
+dev = [
+    "types-pyyaml>=6.0.12.20250915",
+]
+
+# [tool.uv.workspace]
+# members = [
+#     "awa",
+# ]

@@ -1,0 +1,292 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://poi48.xyz/schemas/awa.1.0.0.schema.json",
+    "type": "object",
+    "required": [
+        "meta",
+        "contents"
+    ],
+    "properties": {
+        "meta": {
+            "type": "object"
+        },
+        "contents": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "#/$defs/folder"
+                    },
+                    {
+                        "$ref": "#/$defs/application"
+                    }
+                ]
+            }
+        }
+    },
+    "$defs": {
+        "folder": {
+            "required": [
+                "name",
+                "type",
+                "contents",
+                "id"
+            ],
+            "type": "object",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "folder"
+                    ],
+                    "example": "folder"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Readable name of the folder."
+                },
+                "id": {
+                    "type": "string",
+                    "pattern": "^[a-z]+[-0-9a-z]*$",
+                    "description": "HTML element id for reference."
+                },
+                "comment": {
+                    "type": "string",
+                    "description": "Comment to the application, should be render in the page."
+                },
+                "contents": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/$defs/folder"
+                            },
+                            {
+                                "$ref": "#/$defs/application"
+                            },
+                            {
+                                "$ref": "#/$defs/reference"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "reference": {
+            "required": [
+                "publisher",
+                "name",
+                "type",
+                "refer"
+            ],
+            "type": "object",
+            "properties": {
+                "publisher": {
+                    "type": "string",
+                    "description": "Publisher of the application. Follow the name from GitHub / Winget."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the application. Follow the name from GitHub / Winget."
+                },
+                "type": {
+                    "enum": [
+                        "reference"
+                    ],
+                    "example": "reference"
+                },
+                "refer": {
+                    "type": "string",
+                    "pattern": "^[a-z]+[-0-9a-z]*$",
+                    "description": "HTML element id for reference."
+                },
+                "comment": {
+                    "type": "string",
+                    "description": "Comment to the application, should be render in the page."
+                }
+            }
+        },
+        "application": {
+            "required": [
+                "publisher",
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "publisher": {
+                    "type": "string",
+                    "description": "Publisher of the application. Follow the name from GitHub / Winget."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the application. Follow the name from GitHub / Winget."
+                },
+                "type": {
+                    "enum": [
+                        "application"
+                    ],
+                    "example": "application"
+                },
+                "id": {
+                    "type": "string",
+                    "pattern": "^[a-z]+[-0-9a-z]*$",
+                    "description": "HTML element id for reference."
+                },
+                "cost": {
+                    "type": "string",
+                    "description": "Cost of the application.",
+                    "enum": [
+                        "free",
+                        "freemium",
+                        "paid"
+                    ],
+                    "example": [
+                        "free"
+                    ]
+                },
+                "licenses": {
+                    "type": "array",
+                    "description": "One of `FOSS`, `Proprietary`, or SPDX id.",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/$defs/macroLicense"
+                            },
+                            {
+                                "$ref": "#/$defs/spdx"
+                            }
+                        ]
+                    },
+                    "example": [
+                        "Proprietary"
+                    ]
+                },
+                "platforms": {
+                    "type": "array",
+                    "description": "Reserved, supported platforms by the application.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "Windows",
+                        "Linux",
+                        "macOS"
+                    ]
+                },
+                "architectures": {
+                    "type": "array",
+                    "description": "Reserved, supported architectures by the application.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "amd64",
+                        "arm64"
+                    ]
+                },
+                "locale": {
+                    "type": "array",
+                    "description": "Reserved, use BCP 47 format (e.g. en-US).",
+                    "items": {
+                        "type": "string",
+                        "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-[A-Z]{2})?$"
+                    },
+                    "example": [
+                        "zh-TW",
+                        "en-US"
+                    ]
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "flags": {
+                    "type": "array",
+                    "description": "Flags for filter.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "icon": {
+                    "type": "string",
+                    "description": "Reserved, link to the icon file.",
+                    "format": "uri"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Reserved, currently only show in this manifest."
+                },
+                "comment": {
+                    "type": "string",
+                    "description": "Comment to the application, should be render in the page."
+                },
+                "note": {
+                    "type": "string",
+                    "description": "Reserved, may render in tooltip."
+                },
+                "links": {
+                    "type": "array",
+                    "description": "Links to the official webpage, package info, recommend post, and etc.",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/$defs/link"
+                            }
+                        ]
+                    }
+                },
+                "install": {
+                    "type": "array",
+                    "description": "Install command for package managers, may only render the first one.",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/$defs/link"
+                            }
+                        ]
+                    }
+                },
+                "contents": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/$defs/application"
+                            },
+                            {
+                                "$ref": "#/$defs/reference"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "link": {
+            "type": "object",
+            "properties": {
+                "class": {
+                    "type": "string",
+                    "pattern": "^[a-z]+[-0-9a-z]*$",
+                    "description": "HTML element class for reference."
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "content": {
+                    "type": "string"
+                }
+            }
+        },
+        "macroLicense": {
+            "enum": [
+                "FOSS",
+                "Proprietary"
+            ]
+        },
+        "spdx": {
+            "$ref": "spdx_licenses.schema.json"
+        }
+    }
+}

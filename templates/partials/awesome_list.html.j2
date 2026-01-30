@@ -1,0 +1,146 @@
+{% macro render_awesome_list(level, items) %}
+{% for item in items %}
+{% if item.type == "folder" %}
+{{ render_header(level, item) }}
+{{ render_awesome_list(level + 1, item.contents) }}
+{% else %}
+{{ render_card(item) }}
+{% endif %}
+{% endfor %}
+{% endmacro %}
+
+{% macro render_card(item) %}
+{% if item.type == "reference" %}
+{{ render_reference(item) }}
+{% else %}
+{{ render_application(item) }}
+{% endif %}
+{% endmacro %}
+
+{% macro render_header(level, item) %}
+<div class="ts-content is-large awa-section">
+  <h{{ level }} id="folder-{{ item.id }}">
+    <a class="ts-text is-undecorated" href="#folder-{{ item.id }}">{{ item.name }}</a>
+  </h{{ level }}>
+  {% if item.comment %}<p lass="ts-text">{{ item.comment }}</p>{% endif %}
+  {% if item.note %}<p class="ts-text is-description">{{ item.note }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+
+{% set ICON_MAP = {
+"homepage": "house",
+"github": "github",
+"steam": "steam",
+"ms-store": "windows",
+"firefox": "firefox-browser",
+"chrome": "chrome",
+"edge": "edge",
+"safari": "safari",
+"google-play": "google-play",
+"apple-app-store": "apple",
+} %}
+
+{% macro render_icon_link(link, external = true) %}
+<a class="ts-chip" href="{{ link.href }}" {% if external %}target="_blank" rel="noopener noreferrer" {% endif %}>
+  {% if link.class in ICON_MAP %}
+  <span class="ts-icon is-{{ ICON_MAP[link.class] }}-icon"></span>
+  {% else %}
+  {{ link.content }}
+  {% endif %}
+</a>
+{% endmacro%}
+
+
+{% macro render_application(item) %}
+<div class="ts-content is-dense awa-card">
+  <div class="ts-box" id="app-{{ item.id }}">
+    <div class="ts-content is-dense ts-grid is-middle-aligned mobile-:is-stacked">
+      <div class="column is-fluid ts-header is-heavy">
+        <div class="ts-text">
+          <a class="ts-text is-undecorated" href="#app-{{ item.id }}">
+            <span>{{ item.publisher }}</span>/<span>{{ item.name }}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- {% if item.install and item.install[0].content %} -->
+      <div class="column is-6-wide ts-input is-end-icon">
+        <input type="text" value="{{ item.install[0].content }}" readonly />
+        <button onclick="navigator.clipboard.writeText(this.previousElementSibling.value);">
+          <span class="ts-icon is-clipboard-icon"></span>
+        </button>
+      </div>
+      <!-- {% endif %} -->
+    </div>
+
+    <div class="ts-content is-dense">
+      <div class="ts-grid">
+        <div class="column is-fluid">
+          <div class="ts-wrap is-compact">
+            <span class="ts-chip is-circular">
+              {{ ns.i18n.cost[item.cost] }}
+            </span>
+            <span class="ts-chip is-circular" data-tooltip="{{ ', '.join(item.licenses) }}">
+              {{ ns.i18n.foss_tag[item.is_foss] }}
+            </span>
+
+            {% for tag in item.tags or [] %}
+            <span class="ts-chip is-circular is-outlined">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="column is-fluid is-end-aligned">
+          <div class="ts-wrap is-compact">
+            {% for link in item.links or [] %}
+            {{ render_icon_link(link) }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ts-content is-dense">
+      {% if item.comment %}
+      <div class="ts-text">{{ item.comment }}</div>
+      {% endif %}
+      {% if item.note %}
+      <div class="ts-text is-description">{{ item.note }}</div>
+      {% endif %}
+    </div>
+    {% for subitem in item.contents or [] %}
+    {{ render_card(subitem) }}
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}
+
+
+{% macro render_reference(item) %}
+<div class="ts-content is-dense awa-card">
+  <div class="ts-box" id="app-{{ item.id }}">
+    <div class="ts-content is-dense ts-grid is-middle-aligned">
+      <div class="column is-fluid ts-header is-heavy">
+        <div class="ts-text">
+          <span>{{ item.publisher }}</span>/<span>{{ item.name }}</span>
+        </div>
+      </div>
+      <div class="column">
+        <a href="#app-{{item.refer}}" class="ts-button is-secondary is-dense is-end-labeled-icon">
+          <span class="ts-text">{{ ns.i18n.string.refer_button }}</span>
+          <span class="ts-icon is-secondary is-square-arrow-up-right-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="ts-content is-dense">
+      {% if item.comment %}<div class="ts-text">{{ item.comment }}</div>{% endif
+      %}
+      {% if item.note %}<div class="ts-text is-description">{{ item.note }}</div>
+      {% endif %}
+    </div>
+    <div class="symbol">
+      <span class="ts-icon is-square-arrow-up-right-icon"></span>
+    </div>
+  </div>
+</div>
+{% endmacro %}

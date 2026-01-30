@@ -1,0 +1,207 @@
+---
+data: ../data/windows.app.yml
+output: windows.html
+---
+
+{% extends "./partials/base.html.j2" %}
+
+{% block i18n %}
+{% include "./i18n/zh-TW.html.j2" %}
+{% endblock %}
+
+{# head #}
+
+{% set site_name="キャンディージャー" %}
+{% set page_title="用過都說好的軟體推薦" %}
+{% set author="undecV" %}
+{% set author_link="https://github.com/undecv" %}
+
+{% set favicon="https://undecv.github.io/blog/favicon.32.png" %}
+{% set description="推薦一些 Windows 平台下的軟體" %}
+{% set locale="zh_Hant" %}
+{% set canonical="https://undecv.github.io/Awa/windows.html" %}
+{% set fediverse="@undecv@g0v.social" %}
+{% block tracker %}
+<!--Umami Tracker-->
+<script async="" defer="" data-website-id="" src=""></script>
+{% endblock %}
+
+{# body #}
+
+{# header #}
+
+{% set header_links = [
+{"icon": "house", "outside": true, "tooltip": "回到我的部落格", "href": "https://undecv.github.io/blog/"},
+{"icon": "github", "outside": true, "href": "https://github.com/undecv/Awa/"},
+] %}
+
+{# article #}
+
+{# before #}
+
+{% block before %}
+<p class="ts-quote is-secondary"><del>裝機必備的實用軟體大合集！</del></p>
+<p>推薦一些 Windows 平台下的軟體， 適合日常以及非日常使用。<br />
+  並不一定每一款軟體你都需要或適合你，也未必是大眾的選擇；<br />
+  <b>但是那些無時無刻不在彈廣告的辣雞軟體絕對不會是你的選擇。</b>
+</p>
+
+<div class="ts-notice is-outlined" style="text-decoration: none;">
+  <div class="title">覺得我廢話太多？</div>
+  <div class="content">那就看看左邊索引！</div>
+</div>
+
+<p>本文的範圍是「應用軟體」，不一定有加入例如 Google Docs、Spotify、Telegram 之類的 SaaS
+  網頁應用和服務，想到會再加。以及像 Line 這種軟體我雖然在用，但我有的選嗎 :(</p>
+<p>文章其中的一些軟體，我可能不常用，沒有追著最新版更新，甚至時下可能還沒有安裝，但我一定都有用過、體驗過。</p>
+<p>這裡的選擇標準非常的...主觀。不是排名，不分先後。以下是我的選擇標準：</p>
+<ul class="ts-list is-unordered">
+  <li class="item">確實能夠解決問題，且有效的解決問題；</li>
+  <li class="item">沒有騷擾性質的廣告；</li>
+  <li class="item">界面端莊優雅，易於使用。</li>
+  <li class="item">開源和自由軟體。</li>
+</ul>
+
+<h2>標記</h2>
+<p>本文的標記可能並不完全或有誤，甚至隨着時間的流逝而與現時不符，所以<b>僅供參考</b>，<br />
+  若發現有漏標或錯標，又或是你有更好的選擇，歡迎告訴我 :)</p>
+<ul class="ts-list is-unordered">
+  <li class="item">
+    <p>我們使用看上去十分專業的「雙名法」，即「發佈者／軟體名」。</p>
+  </li>
+  <li class="item">
+    <p>右側的
+      <span class="ts-input is-end-icon" style="width: 11em; display: inline-flex;">
+        <input type="text" value="又臭又長的指令" readonly />
+        <button><span class="ts-icon is-clipboard-icon"></span></button>
+      </span>
+      方便你貼到命令列中一鍵安裝（如果有對應的
+      <a target="_blank" rel="noopener noreferrer"
+        href="https://undecv.github.io/blog/posts/command_line_useages/windows-package-managers/">
+        軟體套件管理器</a>
+      的話）。
+    </p>
+  </li>
+  <li class="item">
+    <p class="ts-text">
+      軟體的費用有不要錢的 <span class="ts-chip is-circular">免費</span>，
+      還有課金變強的 <span class="ts-chip is-circular">加值</span>，
+      和花錢才能用的 <span class="ts-chip is-circular">付費</span>。
+    </p>
+  </li>
+  <li class="item">
+    <p>
+      軟體的授權有 <span class="ts-chip is-circular">開源</span>
+      標記 <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+        href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6">開放原始碼</a>
+      或 <a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+        href="https://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E8%BD%AF%E4%BB%B6">自由軟體</a>
+      ；滑鼠放在上面可以看到看具體的許可證。<br />
+      沒有使用上述開放授權的軟體用 <span class="ts-chip is-circular">專有</span> 標記。
+    </p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">全家桶</span>
+      表示這是一個軟體集合，我都推薦<del>（箱推）</del>。</p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">硬核</span> 表示這個軟體有較高的學習門檻。
+    </p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">命令列工具</span> 表示這個軟體要在命令列中使用。
+    </p>
+  </li>
+  <li class="item">
+    <p>標籤 <span class="ts-chip is-circular is-outlined">專業</span>
+      表示使用這個軟體需要具備相關的專業知識。
+    </p>
+  </li>
+  <li class="item">
+    <p>
+      右側的例如
+      <span class="ts-chip"><span class="ts-icon is-house-icon"></span></span>
+      是連結到官方網站、對應的應用商店等的連結。
+    </p>
+  </li>
+</ul>
+{% endblock %}
+
+{% block after %}
+<h2>如何尋找優秀的實用軟體</h2>
+
+<h3>怎麼找？</h3>
+<ul class="ts-list is-unordered">
+  <li class="item">電腦的軟體的強大，不在於能做到多少事情，而是一件事情能做得多好。</li>
+  <li class="item">應用軟體應該旨在幫助用戶完成工作，提高效率。 <del>而不是讓用戶的電腦成為廣告投放機。</del></li>
+  <li class="item">
+    一些很棒的軟體功能非常強大，但是學習門檻較高，或是需要經過調教，<del>甚至可能需要老司機帶路，</del>但是學會了就能夠享受它們的便利了。
+  </li>
+  <li class="item">不要小看網頁瀏覽器的附加元件＼擴充套件，他們能夠極大地提高體驗和便利。</li>
+</ul>
+
+<h3>去哪裡找？</h3>
+<ul class="ts-list is-unordered">
+  <li class="item">看緣分（這是真...</li>
+  <li class="item">維基百科：根據你想要的功能搜尋，尤其是一些列表和比較的頁面，標題通常像是「List of ...」或「Comparison of
+    ...」。
+  </li>
+  <li class="item">尋找現有軟體的替代品：
+    <ul class="ts-list is-unordered"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+        href="https://alternativeto.net/">AlternativeTo</a></ul>
+    <ul class="ts-list is-unordered"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+        href="https:/openalternative.co/alternatives">OpenAlternative</a></ul>
+  </li>
+  <li class="item">相關的部落格＼網站：
+    <ul class="ts-list is-unordered">
+      <li class="item"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="http://www.appinn.com/">小众软件</a>
+      </li>
+      <li class="item"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="http://www.azofreeware.com/">阿榮福利味</a></li>
+      <li class="item"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="https://free.com.tw/">免費資源網路社群</a>
+      </li>
+      <li class="item"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="https://pcrookie.com/">軟體玩家</a>
+      </li>
+      <li class="item"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="http://www.playpcesor.com/">電腦玩物</a>
+      </li>
+      <li class="item"><a target="_blank" rel="noopener noreferrer" class="ts-text is-external-link"
+          href="http://xbeta.info/">善用佳软</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+{% endblock %}
+
+{# footer #}
+
+{% set footer_links = [
+{"content": "Discussions", "outside": true, "href":
+"https://github.com/undecV/Awa/discussions"},
+{"content": "Privacy", "outside": true, "href": "https://undecv.github.io/blog/privacy/"},
+] %}
+
+
+{# copyright #}
+
+{% block copyright %}
+© 2017-{{ now.strftime('%Y') }} by
+<a target="_blank" rel="noopener noreferrer" href="{{ author_link }}">{{ author }}</a>
+is licensed under
+<a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  CC BY-NC-SA 4.0</a>
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt=""
+  style="max-width: 1em;max-height:1em;margin-left: .2em;">
+{% endblock %}
+{% block copyright_2 %}
+Generated by <a href="https://github.com/undecV/Awa" target="_blank" rel="noopener noreferrer">Awa</a>.
+{% endblock %}

@@ -1,0 +1,167 @@
+{% set ns = namespace(i18n=None) %}
+{% block i18n %}{% endblock %}
+
+{% from "partials/toc.html.j2" import render_toc with context %}
+{% from "partials/awesome_list.html.j2" import render_awesome_list with context %}
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <head>
+    <title>{{ site_name }} • {{ page_title }}</title>
+    <link rel="icon" type="image/png" href="{{ favicon }}">
+    <meta name="base" content="{{ canonical }}">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="{{ description }}">
+    <meta name="og:description" content="{{ description }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="{{ locale }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:site_name" content="{{ site_name }}">
+    <meta name="fediverse:creator" content="{{ fediverse }}">
+    {% block tracker %}{% endblock %}
+
+    <!-- Tocas UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/5.0.2/tocas.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/5.0.2/tocas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+      h1 {
+        margin: 0;
+      }
+
+      #toc-sidebar {
+        max-width: 30%;
+      }
+
+      ul {
+        padding-inline-start: 0;
+      }
+    </style>
+  </head>
+
+<body>
+  <!-- TOC for `mobile-` -->
+  <dialog class="ts-app-drawer is-start is-small" id="toc-drawer">
+    <div class="content">
+      <div class="ts-content">
+        <div class="ts-grid">
+          <div class="column is-fluid">
+            <div class="ts-header" id="toc-drawer-title">
+              {{ ns.i18n.header.toc }}</div>
+          </div>
+          <div class="column">
+            <button class="ts-close is-large" data-dialog="toc-drawer"></button>
+          </div>
+        </div>
+      </div>
+      <div class="ts-content">
+        {{ render_toc(contents) }}
+      </div>
+    </div>
+  </dialog>
+
+  <div class="ts-app-layout is-vertical is-fullscreen">
+
+    <!-- Top bar -->
+    <div class="cell">
+      <div class="ts-app-topbar">
+        <div class="start">
+          <!--  TOC button for mobile- -->
+          <button class="item tablet+:has-hidden" data-dialog="toc-drawer">
+            <span class="ts-icon is-bars-icon"></span>
+          </button>
+        </div>
+        <div class="center">
+          <div class="ts-header">
+            <span class="mobile-:has-hidden">{{ site_name }} • </span>{{ page_title }}
+          </div>
+        </div>
+        <div class="end">
+          {% for link in header_links %}
+          <a class="item" href="{{ link.href }}" {% if link.outside %}target="_blank" rel="noopener noreferrer" {% endif
+            %} {% if link.tooltip %}data-tooltip="{{ link.tooltip }}" {% endif %}>
+            <span class="ts-icon is-{{ link.icon }}-icon"></span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="cell is-fluid is-vertical is-scrollable">
+
+      <div class="cell is-fluid is-horizontal is-scrollable">
+
+        <!-- TOC for tablet+ -->
+        <div class="cell is-secondary is-scrollable mobile-:has-hidden" id="toc-sidebar">
+          <div class="ts-content">
+            <div class="ts-grid">
+              <div class="column is-fluid">
+                <div class="ts-header" id="toc-sidebar-title">{{ ns.i18n.header.toc }}</div>
+              </div>
+              <div class="column"></div>
+            </div>
+          </div>
+          <div class="ts-content">
+            {{ render_toc(contents) }}
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="cell is-fluid is-scrollable">
+          <article>
+
+            <!-- Article Header -->
+            <div class="ts-content is-secondary is-vertically-very-padded">
+              <div class="ts-container is-padded is-very-narrow">
+                <h1 class="ts-header is-massive">{{ page_title }}</h1>
+                <div class="ts-meta is-secondary">
+                  <span class="item">{{ author }}</span>
+                  <time class="item" datetime="{{ now.isoformat('T', 'seconds') }}">
+                    {{ now.isoformat("T", "seconds") }}
+                  </time>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-content">
+              <div class="ts-container is-fitted is-very-narrow">
+                {% block before %}{% endblock %}
+
+                {{ render_awesome_list(3, contents) }}
+
+                {% block after %}{% endblock %}
+              </div>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="ts-content is-secondary is-vertically-very-padded">
+              <div class="ts-header is-heavy">{{ page_title }}</div>
+              <div class="ts-text is-description">{% block copyright %}{% endblock %}</div>
+              <div class="ts-text is-description">{% block copyright_2 %}{% endblock %}</div>
+              <div class="ts-meta">
+                {% for link in footer_links %}
+                <a class="item" href="{{ link.href }}" {% if link.outside %}target="_blank" rel="noopener noreferrer" {%
+                  endif %}>
+                  {{ link.content }}
+                </a>
+                {% endfor %}
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

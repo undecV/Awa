@@ -1,0 +1,19 @@
+# Force text files to use LF
+* text=auto eol=lf
+
+# Jupyter notebook
+*.ipynb  text eol=lf
+
+# Windows native scripts
+*.bat  eol=crlf
+*.cmd  eol=crlf
+*.ps1  eol=crlf
+
+# Binary files
+*.png  -text
+*.jpg  -text
+*.jpeg -text
+*.gif  -text
+*.webp -text
+*.pdf  -text
+*.zip  -text
