@@ -406,6 +406,12 @@ contents:
         comment: 快速小巧且功能強大的圖片瀏覽器。
         links: [{class: homepage, href: "https://www.irfanview.com/"}]
         install: [{class: winget, content: "winget install -e --id IrfanSkiljan.IrfanView"}]
+      - publisher: Amin Ahmadi
+        name: Perspective Cropper
+        cost: free
+        licenses: [Proprietary]
+        comment: 透視變化來裁剪圖像。就是定位四個角點然後拉直。
+        links: [{class: homepage, href: "https://amin-ahmadi.com/perspective-cropper/"}]
       - name: Screenshot - 螢幕截圖
         id: screenshot
         type: folder
@@ -1053,9 +1059,11 @@ contents:
       - publisher: PasteBar
         name: PasteBar
         cost: free
-        licenses: [GPL-3.0]
-        comment: 未來可期待的剪貼板管理器。真正的剪貼板，有個看得見的「板」，「剪貼」上面的內容。
-        links: [{class: homepage, href: "https://ditto-cp.sourceforge.io/"}]
+        licenses: [CC-BY-NC-4.0]
+        comment: 未來可期的剪貼板管理器。真正的剪貼板，有個看得見的「板」，「剪貼」上面的內容。
+        links:
+          - {class: github, href: "https://github.com/PasteBar/PasteBarApp"}
+          - {class: homepage, href: "https://www.pastebar.app/"}
         install: [{class: winget, content: "winget install -e --id PasteBar.PasteBar"}]
   - name: Languages - 語言
     id: languages
@@ -1084,6 +1092,17 @@ contents:
         id: ms-powertoys
         licenses: [MIT]
         comment: Windows 官方出品，更靈活的視窗佈局、圖片改大小、批量改檔名等一大堆講不完的實用功能。
+        note: >
+          截止 2025 S4，它支援：
+          剪貼簿增強（Advanced Paste）、視窗置頂（Always on Top）、螢幕常亮（Awake）、螢幕取色（Color Picker）、
+          命令列找套件（Command Not Found）、新*快速啟動器（Command Palette）、視窗裁剪置頂（Crop and Lock）、
+          環境變數編輯器（Environment Variables）、螢幕視窗分區（FancyZones）、
+          檔案總管擴充套件（File Explorer Add-ons）、檔案解鎖（File Locksmith）、Host 檔編輯器（Hosts File Editor）、
+          批量調整圖像大小（Image Resizer）、鍵盤快捷鍵（Keyboard Manager）、自動切換亮暗主題（Light Switch）、
+          滑鼠增強（Mouse Utilities）、軟體 KVM（Mouse Without Borders）、檔案總管「建立」選單增強（New+）、
+          檔案總管預覽（Peek）、批量改檔名（PowerRename）、快速啟動器（PowerToys Run）、重音字元輸入（Quick Accent）、
+          登錄檔預覽（Registry Preview）、螢幕測量（Screen Ruler）、快速鍵導引（Shortcut Guide）、
+          螢幕 OCR（Text Extractor）、工作區管理（Workspaces）、螢幕放大標記錄製（ZoomIt），這麼多的功能。
         links: [{class: homepage, href: "https://docs.microsoft.com/en-us/windows/powertoys/"}]
         install: [{class: winget, content: "winget install -e --id Microsoft.PowerToys"}]
       - publisher: Xander Frangos
