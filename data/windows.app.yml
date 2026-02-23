@@ -261,6 +261,24 @@ contents:
         comment: 錄音，音訊剪輯、處理。
         links: [{class: homepage, href: "https://www.audacityteam.org/"}]
         install: [{class: winget, content: "winget install -e --id Audacity.Audacity"}]
+      - publisher: VB-Cable
+        name: Voicemeeter
+        cost: free
+        tags: [專業]
+        licenses: [Proprietary]
+        comment: 虛擬音訊混音器。可以把多個音訊裝置的輸入輸出混在一起，並且做一些簡單的處理。
+        links: [{class: homepage, href: "https://www.voicemeeter.com/"}]
+        install: [{class: winget, content: "winget install -e --id VB-Audio.Voicemeeter"}]
+      - publisher: Jackaudio
+        name: JACK2
+        cost: free
+        tags: [專業]
+        licenses: [GPL-2.0]
+        comment: 專業的音訊伺服器。
+        links:
+        - {class: homepage, href: "https://jackaudio.org/downloads/"}
+        - {class: github, href: "https://github.com/jackaudio/jack2"}
+        install: [{class: winget, content: "winget install -e --id Jackaudio.JACK2"}]
   - name: Video - 視訊
     id: video
     comment: 我知道現在是串流影片的時代了，但…
@@ -383,6 +401,14 @@ contents:
         comment: 用指令玩圖片。
         links: [{class: homepage, href: "https://imagemagick.org/"}]
         install: [{class: winget, content: "winget install -e --id ImageMagick.ImageMagick"}]
+      - publisher: OliverBetz
+        name: ExifTool
+        cost: free
+        tags: [專業, 命令列工具]
+        licenses: [GPL-3.0-or-later]
+        comment: 查看和編輯圖片的 Exif、IPTC、XMP 等元資料。
+        links: [{class: homepage, href: "https://exiftool.org/"}]
+        install: [{class: winget, content: "winget install -e --id OliverBetz.ExifTool"}]
       - publisher: DuongDieuPhap
         name: ImageGlass
         cost: free
@@ -406,6 +432,21 @@ contents:
         comment: 快速小巧且功能強大的圖片瀏覽器。
         links: [{class: homepage, href: "https://www.irfanview.com/"}]
         install: [{class: winget, content: "winget install -e --id IrfanSkiljan.IrfanView"}]
+      - publisher: KDE
+        name: digiKam
+        cost: free
+        licenses: [GPL-2.0-or-later]
+        comment: KDE 家族的圖片「管理」器。
+        links: [{class: homepage, href: "https://www.digikam.org/"}]
+        install: [{class: winget, content: "winget install -e --id KDE.digiKam"}]
+      - publisher: BenHollis
+        name: PNG Gauntlet
+        cost: free
+        tags: [Deprecated]
+        licenses: [Proprietary]
+        comment: PNG 圖片無損壓縮工具，支援批次處理。
+        links: [{class: homepage, href: "https://pnggauntlet.com/"}]
+        install: [{class: winget, content: "winget install -e --id BenHollis.PNGGauntlet"}]
       - publisher: Amin Ahmadi
         name: Perspective Cropper
         cost: free
@@ -576,6 +617,14 @@ contents:
         comment: 現代的檔案總管。
         links: [{class: homepage, href: "https://files.community/",}]
         install: [{class: winget, content: "winget install -e --id FilesCommunity.Files"}]
+      - publisher: KDE
+        name: Dolphin
+        cost: free
+        licenses: [GPL-2.0-or-later]
+        comment: KDE 家族的檔案總管。是的你可以在 Windows 上用 KDE 的檔案總管。這倒反天罡的感覺就像在麥當勞裡點到摩斯漢堡。
+        note: 這可能是 KDE 家族在秀肌肉，但目前沒有對應 Windows 特化的整合，所以目前僅供娛樂。
+        links: [{class: homepage, href: "https://apps.kde.org/zh-tw/dolphin/"}]
+        install: [{class: winget, content: "winget install -e --id KDE.Dolphin"}]
       - publisher: Syncthing
         name: Syncthing
         cost: free
@@ -597,6 +646,13 @@ contents:
         comment: 檔案、資料夾比較、差分、同步。
         links: [{class: homepage, href: "https://winmerge.org/"}]
         install: [{class: winget, content: "winget install -e --id WinMerge.WinMerge"}]
+      - publisher: KDE
+        name: KDiff3
+        cost: free
+        licenses: [GPL-2.0-or-later]
+        comment: KDE家族出品的檔案、資料夾比較、差分。
+        links: [{class: homepage, href: "https://apps.kde.org/zh-tw/kdiff3/"}]
+        install: [{class: winget, content: "winget install -e --id KDE.KDiff3"}]
       - publisher: DupeGuru
         name: dupeGuru
         cost: free
@@ -604,6 +660,14 @@ contents:
         comment: 尋找重複檔案。
         links: [{class: homepage, href: "https://dupeguru.voltaicideas.net",}]
         install: [{class: winget, content: "winget install -e --id DupeGuru.DupeGuru"}]
+      - publisher: HulubuluSoftware
+        name: Advanced Renamer
+        cost: freemium
+        licenses: [Proprietary]
+        comment: 高級的檔案批次重新命名工具。可以用各種規則和檔案的 Metadata 來重新命名檔案。
+        note: 免費版本功能已經很強大了。
+        links: [{class: homepage, href: "https://dupeguru.voltaicideas.net",}]
+        install: [{class: winget, content: "winget install -e --id HulubuluSoftware.AdvancedRenamer"}]
       - name: Compression - 檔案壓縮
         id: compression
         type: folder
@@ -786,6 +850,13 @@ contents:
         licenses: [Proprietary]
         comment: 線上的辦公室軟體套件，無需下載，可以多人協作、試試同步編輯。網路世界的 M$ Office。
         links: [{class: homepage, href: "https://workspace.google.com/"}]
+      - publisher: KDE
+        name: Okular
+        cost: free
+        licenses: [GPL-2.0-or-later, GFDL-1.3]
+        comment: KDE 家族的文件閱讀器，支持 PDF、EPUB、DjVu、XPS、ODF 等多種格式，功能強大。
+        links: [{class: homepage, href: "https://apps.kde.org/zh-tw/okular/"}]
+        install: [{class: winget, content: "winget install -e --id KDE.Okular"}]
       - publisher: MementoDB
         name: Memento Database Desktop
         cost: freemium
@@ -833,6 +904,14 @@ contents:
         comment: 算賬軟體，據說職業會計看了它都直呼專業（？
         links: [{class: homepage, href: "https://www.gnucash.org/"}]
         install: [{class: winget, content: "winget install -e --id GnuCash.GnuCash"}]
+      - publisher: KDE
+        name: KMyMoney
+        cost: free
+        licenses: [GPL-2.0-or-later]
+        tags: [專業]
+        comment: KDE 家族的算賬軟體。可能需要先修會計學。
+        links: [{class: homepage, href: "https://apps.kde.org/zh-tw/kmymoney/"}]
+        install: [{class: winget, content: "winget install -e --id KDE.kmymoney"}]
       - name: TeX - 學術排版
         id: office-tex
         type: folder
@@ -1105,6 +1184,13 @@ contents:
           螢幕 OCR（Text Extractor）、工作區管理（Workspaces）、螢幕放大標記錄製（ZoomIt），這麼多的功能。
         links: [{class: homepage, href: "https://docs.microsoft.com/en-us/windows/powertoys/"}]
         install: [{class: winget, content: "winget install -e --id Microsoft.PowerToys"}]
+      - publisher: QL-Win
+        name: QuickLook
+        cost: free
+        licenses: [GPL-3.0]
+        comment: 類似 Mac 家的 Quick Look 功能：在檔案總管中，按空白鍵快速預覽內容。
+        note: 和 PowerToys Peek 一樣，但是功能更強大，支援擴充套件，生態繁盛。
+        links: [{class: github, href: "https://github.com/QL-Win/QuickLook"}]
       - publisher: Xander Frangos
         name: Twinkle Tray
         cost: free
@@ -1335,6 +1421,14 @@ contents:
         comment: 分佈式版本管理。
         links: [{class: homepage, href: "https://git-scm.com/",}]
         install: [{class: winget, content: "winget install -e --id Git.Git"}]
+      - publisher: GitHub
+        name: GitHub CLI
+        cost: free
+        tags: [專業, 命令列工具]
+        licenses: [MIT]
+        comment: GitHub 命令列工具。
+        links: [{class: homepage, href: "https://cli.github.com/",}]
+        install: [{class: winget, content: "winget install -e --id GitHub.cli"}]
       - publisher: DevToys
         name: DevToys
         cost: free
@@ -1382,6 +1476,13 @@ contents:
         comment: 純文字＼程式碼編輯器，啟動速度快，可以代替愈發臃腫的記事本，從此再也不怕亂碼。
         links: [{class: homepage, href: "https://notepad-plus-plus.org"}]
         install: [{class: winget, content: "winget install -e --id Notepad++.Notepad++"}]
+      - publisher: KDE
+        name: Kate
+        cost: free
+        licenses: [LGPL-2.1-or-later]
+        comment: 純文字＼程式碼編輯器，簡直就是 KDE 家的 VSCode。
+        links: [{class: homepage, href: "https://apps.kde.org/zh-tw/kate/"}]
+        install: [{class: winget, content: "winget install -e --id KDE.Kate"}]
       - publisher: Microsoft
         name: Visual Studio Code
         cost: free
