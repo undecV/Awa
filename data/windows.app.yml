@@ -972,7 +972,7 @@ contents:
         cost: free
         licenses: [Apache-2.0]
         tags: [網頁應用]
-        comment: 繪製圖表。曾經叫做 [code>draw.io</code]，現在叫做 <code>diagrams.net[/code]。
+        comment: 繪製圖表。曾經叫做 [code]draw.io[/code]，現在叫做 [code]diagrams.net[/code]。
         note: 也可以看看把它整合到 VSCode 中的擴充套件。
         links: [{class: homepage, href: "https://app.diagrams.net"}]
       - publisher: Mermaid
@@ -1580,21 +1580,21 @@ contents:
         licenses: [Proprietary]
         comment: Nvidia CUDA 工具包，用於開發和運行 CUDA 應用程式，例如 AI。
         links: [{class: homepage, href: "https://developer.nvidia.com/cuda-toolkit"}]
-        install: [{class: winget, content: "winget install --id \"Nvidia.CUDA\""}]
+        install: [{class: winget, content: "winget install --id Nvidia.CUDA"}]
       - publisher: Logitech
         name: Options+
         cost: free
         licenses: [Proprietary]
         comment: "Logitech 官方 [s]惡名昭彰的[/s] 的滑鼠、鍵盤、耳機等外設控制面板。"
-        links: [{class: homepage, href: "https://mikrotik.com/download"}]
-        install: [{class: winget, content: "winget install -e --id Mikrotik.WinBox"}]
+        links: [{class: homepage, href: "https://www.logitech.com/en-us/software/logi-options-plus"}]
+        install: [{class: winget, content: "winget install -e --id Logitech.OptionsPlus"}]
       - publisher: Logitech
         name: G HUB
         cost: free
         licenses: [Proprietary]
         comment: "Logitech G 系列官方的滑鼠、鍵盤、耳機等外設控制面板。"
-        links: [{class: homepage, href: "https://mikrotik.com/download"}]
-        install: [{class: winget, content: "winget install -e --id Mikrotik.WinBox"}]
+        links: [{class: homepage, href: "https://www.logitechg.com/en-us/software/ghub"}]
+        install: [{class: winget, content: "winget install -e --id Logitech.GHub"}]
       - publisher: Mikrotik
         name: WinBox
         cost: free
