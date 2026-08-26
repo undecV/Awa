@@ -34,6 +34,46 @@ contents:
         comment: 御三家之已經內建。
         links: [{class: homepage, href: "https://www.microsoft.com/edge"}]
         install: [{class: winget, content: "winget install -e --id Microsoft.Edge"}]
+  - name: Cloud Service - 雲端服務
+    type: folder
+    id: service
+    comment: 是的，常見的雲端服務都的 Windows 客戶端都載得到。
+    contents:
+      - publisher: Telegram
+        name: Telegram
+        cost: freemium
+        licenses: [GPL-3.0-or-later]
+        comment: 聊天軟體。
+        links: [{class: homepage, href: "https://telegram.org/"}]
+        install: [{class: winget, content: "winget install -e --id Telegram.TelegramDesktop"}]
+      - publisher: Discord
+        name: Discord
+        cost: freemium
+        licenses: [Proprietary]
+        comment: 語音聊天室、社群。
+        links: [{class: homepage, href: "https://discord.com/"}]
+        install: [{class: winget, content: "winget install -e --id Discord.Discord"}]
+      - publisher: Dropbox
+        name: Dropbox
+        cost: freemium
+        licenses: [Proprietary]
+        comment: Dropbox 雲端硬碟。
+        links: [{class: homepage, href: "https://www.dropbox.com/"}]
+        install: [{class: winget, content: "winget install -e --id Dropbox.Dropbox"}]
+      - publisher: Google
+        name: GoogleDrive
+        cost: free
+        licenses: [Proprietary]
+        comment: Google 雲端硬碟。
+        links: [{class: homepage, href: "https://www.google.com/drive/"}]
+        install: [{class: winget, content: "winget install -e --id Google.GoogleDrive"}]
+      - publisher: Mega
+        name: MegaSync
+        cost: freemium
+        licenses: [Proprietary]
+        comment: Mega 雲端硬碟。
+        links: [{class: homepage, href: "https://mega.io/"}]
+        install: [{class: winget, content: "winget install -e --id Mega.MEGASync"}]
   - name: Network - 網路
     type: folder
     id: network
@@ -89,7 +129,7 @@ contents:
           licenses: [GPL-2.0]
           comment: 自由的 BitTorrent 客戶端，擁有可訂製的種子搜尋功能。
           links: [{class: homepage, href: "https://www.qbittorrent.org/"}]
-          install: [{class: winget, content: "winget install -e --id qBittorrent.qBittorrent"}]
+          install: [{class: winget, content: "winget install -e --id qBittorrent.qBittorrent.lt2"}]
         - publisher: JDownloader
           name: JDownloader
           cost: free
@@ -120,6 +160,14 @@ contents:
           comment: Android -> Windows 螢幕有線、無線投影。建議找一個好用的前端搭配使用。
           links: [{class: github, href: "https://github.com/Genymobile/scrcpy"}]
           install: [{class: winget, content: "winget install -e --id Genymobile.scrcpy"}]
+          contents:
+            - publisher: viarotel
+              name: Escrcpy
+              cost: free
+              licenses: [GPL-3.0]
+              comment: scrcpy 的前端。
+              links: [{class: github, href: "https://github.com/viarotel-org/escrcpy"}]
+              install: [{class: winget, content: "winget install -e --id viarotel.Escrcpy"}]
         - publisher: LocalSend
           name: LocalSend
           cost: free
@@ -157,6 +205,13 @@ contents:
           comment: 老牌遠端桌面。
           links: [{class: homepage, href: "https://uvnc.com/"}]
           install: [{class: winget, content: "winget install -e --id uvncbvba.UltraVNC"}]
+        # - publisher: TigerVNC
+        #   name: TigerVNC
+        #   cost: free
+        #   licenses: [GPL-2.0-or-later]
+        #   comment: 老牌遠端桌面。
+        #   links: [{class: homepage, href: "https://tigervnc.org/"}]
+        #   install: [{class: winget, content: "winget install -e --id TigerVNC.TigerVNC"}]
         - publisher: RustDesk
           name: RustDesk
           cost: freemium
@@ -207,6 +262,13 @@ contents:
               - {class: homepage, href: "https://docs.nefarius.at/projects/HidHide/"}
               - {class: github, href: "https://github.com/nefarius/HidHide"}
             install: [{class: winget, content: "winget install -e --id Nefarius.HidHide"}]
+          - publisher: VirtualDrivers
+            name: Virtual Display Driver
+            cost: free
+            licenses: [MIT]
+            comment: 虛擬顯示器驅動程式。Sunshine 可以用它專門搞一個虛擬顯示器。
+            links: [{class: github, href: "https://github.com/VirtualDrivers/Virtual-Display-Driver"}]
+            install: [{class: winget, content: "winget install -e --id VirtualDrivers.Virtual-Display-Driver"}]
       - name: SSH / FTP - 經典協定
         id: remote-ssh
         type: folder
@@ -307,7 +369,7 @@ contents:
         licenses: [Proprietary]
         comment: 老當益壯 MPC-HC 播放器和眾多解碼器全家桶，大多組件開源。
         links: [{class: homepage, href: "http://www.codecguide.com/"}]
-        install: [{class: winget, content: "winget install -e --id CodecGuide.K-LiteCodecPack.Full"}]
+        install: [{class: winget, content: "winget install -e --id CodecGuide.K-LiteCodecPack.Mega"}]
       - publisher: VideoLAN
         name: VLC
         cost: free
@@ -324,6 +386,13 @@ contents:
           - {class: homepage, href: "https://ruffle.rs/"}
           - {class: github, href: "https://github.com/ruffle-rs/ruffle"}
         install: [{class: winget, content: "winget install -e --id Ruffle.Ruffle.Nightly"}]
+      # - publisher: RyanYuuki
+      #   name: AnymeX
+      #   cost: free
+      #   licenses: [MIT]
+      #   comment: 動畫、動漫、漫畫、輕小說的資訊聚合器。
+      #   links: [{class: github, href: "https://github.com/RyanYuuki/AnymeX"}]
+      #   install: [{class: winget, content: "winget install -e --id RyanYuuki.AnymeX"}]
       - name: Video Editing - 影片編輯
         id: video-editing
         type: folder
@@ -399,6 +468,7 @@ contents:
         tags: [專業, 命令列工具]
         licenses: [ImageMagick]
         comment: 用指令玩圖片。
+        note: 通常是被其他軟體需要。
         links: [{class: homepage, href: "https://imagemagick.org/"}]
         install: [{class: winget, content: "winget install -e --id ImageMagick.ImageMagick"}]
       - publisher: OliverBetz
@@ -432,6 +502,14 @@ contents:
         comment: 快速小巧且功能強大的圖片瀏覽器。
         links: [{class: homepage, href: "https://www.irfanview.com/"}]
         install: [{class: winget, content: "winget install -e --id IrfanSkiljan.IrfanView"}]
+        contents:
+          - publisher: IrfanSkiljan
+            name: IrfanView Plugins
+            cost: free
+            licenses: [GPL-3.0]
+            comment: IrfanView 的外掛。
+            links: [{class: homepage, href: "https://www.irfanview.com/plugins.htm"}]
+            install: [{class: winget, content: "winget install -e --id IrfanSkiljan.IrfanViewPlugins"}]
       - publisher: KDE
         name: digiKam
         cost: free
@@ -713,6 +791,13 @@ contents:
             links: [{class: homepage, href: "https://www.voidtools.com/"}]
             install: [{class: winget, content: "winget install -e --id voidtools.Everything"}]
             contents:
+              - publisher: voidtools
+                name: Everything CLI
+                cost: free
+                licenses: [MIT]
+                comment: 工具列版本的 Everything，通常被其他軟體需要。
+                links: [{class: homepage, href: "https://www.voidtools.com/"}]
+                install: [{class: winget, content: "winget install -e --id voidtools.Everything.Cli"}]
               - publisher: stnkl
                 name: EverythingToolbar
                 cost: free
@@ -809,6 +894,14 @@ contents:
         comment: 網路分析工具。
         links: [{class: homepage, href: "https://www.wireshark.org/"}]
         install: [{class: winget, content: "winget install -e --id WiresharkFoundation.Wireshark"}]
+      - publisher: PortSwigger
+        name: Burp Suite
+        cost: freemium
+        licenses: [Proprietary]
+        tags: [專業]
+        comment: 網路安全測試工具。
+        links: [{class: homepage, href: "https://portswigger.net/burp"}]
+        install: [{class: winget, content: "winget install -e --id PortSwigger.BurpSuite.Community"}]
       - publisher: Insecure
         name: Nmap
         cost: free
@@ -826,6 +919,13 @@ contents:
         comment: 擷取網路流量的工具。
         note: 通常是被別的軟體需要。
         links: [{class: homepage, href: "https://npcap.com/"}]
+      - publisher: MrKaran
+        name: Doggo
+        cost: free
+        licenses: [GPL-3.0-or-later]
+        comment: 用 Go-lang 寫的 [code]dig[/code]， DNS 分析工具。
+        links: [{class: github, href: "https://github.com/mr-karan/doggoge"}]
+        install: [{class: winget, content: "winget install -e --id MrKaran.Doggo"}]
   - name: Office - 辦公室／文書處理
     id: office
     type: folder
@@ -912,6 +1012,42 @@ contents:
         comment: KDE 家族的算賬軟體。可能需要先修會計學。
         links: [{class: homepage, href: "https://apps.kde.org/zh-tw/kmymoney/"}]
         install: [{class: winget, content: "winget install -e --id KDE.kmymoney"}]
+      - publisher: 63BeetleSmurf
+        name: PinnyNotes
+        cost: free
+        licenses: [GPL-2.0]
+        comment: 真正的便利貼，可以置頂在螢幕上。完全本地端，隨用隨丟，甚至有一些簡單的文字處理功能。
+        links: [{class: github, href: "https://github.com/63BeetleSmurf/PinnyNotes"}]
+        install: [{class: winget, content: "winget install -e --id 63BeetleSmurf.PinnyNotes"}]
+      - publisher: Espanso
+        name: Espanso
+        cost: free
+        licenses: [GPL-3.0]
+        comment: 輸入替換，用於快速輸入一些繁雜的內容。例如輸入 [code]:date[/code] 可以替換成當前日期。社群繁盛，有很多已有的替換規則，例如 Emoji，甚至可以 Roll 骰子。
+        links: [{class: homepage, href: "https://espanso.org/"}]
+        install: [{class: winget, content: "winget install -e --id Espanso.Espanso"}]
+      - publisher: ibsorn
+        name: gLabels
+        cost: free
+        licenses: [GPL-3.0]
+        comment: 標籤、名片、信封、條碼等的設計和列印。
+        links: [{class: homepage, href: "https://glabels.org/"}]
+        install: [{class: winget, content: "winget install -e --id ibsorn.gLabels"}]
+      - publisher: FreeCAD
+        name: FreeCAD
+        cost: free
+        licenses: [LGPL-2.1-or-later]
+        tags: [專業]
+        comment: 3D CAD、MCAD、CAx、CAE 和 PLM 軟體。
+        links: [{class: homepage, href: "https://www.freecad.org/"}]
+        install: [{class: winget, content: "winget install -e --id FreeCAD.FreeCAD"}]
+      - publisher: JosephFinney
+        name: Text-Grab
+        cost: free
+        licenses: [GPL-3.0-or-later]
+        comment: 快速 OCR 工具，從圖片中提取文字。
+        links: [{class: github, href: "https://github.com/TheJoeFin/Text-Grab"}]
+        install: [{class: winget, content: "winget install -e --id JosephFinney.Text-Grab"}]
       - name: TeX - 學術排版
         id: office-tex
         type: folder
@@ -1092,10 +1228,31 @@ contents:
         comment: 將筆記內容分成一個個區塊再組合，功能強大。
         links: [{class: github, href: "https://www.notion.com/"}]
         install: [{class: winget, content: "winget install -e --id Notion.Notion"}]
+      # - publisher: Zettlr
+      #   name: Zettlr
+      #   cost: free
+      #   licenses: [GPL-3.0]
+      #   comment: Markdown 筆記軟體，支援學術寫作。
+      #   links: [{class: homepage, href: "https://www.zettlr.com/"}]
+      #   install: [{class: winget, content: "winget install -e --id Zettlr.Zettlr"}]
+      # - publisher: ToEverything
+      #   name: AFFiNE
+      #   cost: freemium
+      #   licenses: [MIT]
+      #   comment: Notion 平替。
+      #   links: [{class: homepage, href: "https://affine.pro/"}]
+      #   install: [{class: winget, content: "winget install -e --id ToEverything.AFFiNE"}]
   - name: GTD - 時間管理系統
     id: gtd
     type: folder
     contents:
+      - publisher: Super Productivity
+        name: Super Productivity
+        cost: free
+        licenses: [GPL-3.0]
+        comment: 全功能 Get Things Done（GTD）軟體。支援跨平臺、跨裝置同步，支援番茄工作法計時器、任務管理、專案管理、日曆、筆記等功能。
+        links: [{class: github, href: "https://github.com/super-productivity/super-productivity"}]
+        install: [{class: winget, content: "winget install -e --id SuperProductivity.SuperProductivity"}]
       - publisher: Splode
         name: Pomotroid
         cost: free
@@ -1191,6 +1348,7 @@ contents:
         comment: 類似 Mac 家的 Quick Look 功能：在檔案總管中，按空白鍵快速預覽內容。
         note: 和 PowerToys Peek 一樣，但是功能更強大，支援擴充套件，生態繁盛。
         links: [{class: github, href: "https://github.com/QL-Win/QuickLook"}]
+        install: [{class: winget, content: "winget install -e --id QL-Win.QuickLook"}]
       - publisher: Xander Frangos
         name: Twinkle Tray
         cost: free
@@ -1212,31 +1370,31 @@ contents:
         cost: free
         licenses: [MIT]
         comment: 給軟體指定聲音設備、控制音量，需要 Win10 1803 以上。
-        links: [{class: homepage, href: "https://cheatengine.org/index.php"}]
+        links: [{class: hithub, href: "https://github.com/File-New-Project/EarTrumpet"}]
         install: [{class: winget, content: "winget install -e --id File-New-Project.EarTrumpet"}]
       - publisher: AutoHotkey
         name: AutoHotkey
         cost: free
         licenses: [GPL-2.0]
         tags: [專業]
-        comment: 強大的自動化工具，需要一點寫手稿語言能力。
+        comment: 強大的自動化工具，需要一點程式設計能力。
         links: [{class: homepage, href: "https://devtoys.app/"}]
         install: [{class: winget, content: "winget install -e --id AutoHotkey.AutoHotkey"}]
       - publisher: Dark Byte
         name: Cheat Engine
+        id: dark-byte-cheat-engine
         cost: free
         licenses: [APL-1.0]
         tags: [專業]
         comment: 通用的遊戲記憶體修改器。
         links: [{class: homepage, href: "https://cheatengine.org/index.php"}]
-      - publisher: BlueStack
-        name: BlueStacks
+      - publisher: AltSnap
+        name: AltSnap
         cost: free
-        licenses: [Proprietary]
-        tags: [很多廣告]
-        comment: 在 Windows 電腦上玩 Android 遊戲。
-        links: [{class: homepage, href: "https://cheatengine.org/index.php"}]
-        install: [{class: winget, content: "winget install -e --id BlueStack.BlueStacks"}]
+        licenses: [GPL-3.0]
+        comment: 視窗貼齊，以及一大票滑鼠手勢、鍵盤快捷鍵、視窗管理功能。
+        links: [{class: github, href: "https://github.com/AltSnap/AltSnap"}]
+        install: [{class: winget, content: "winget install -e --id AltSnap.AltSnap"}]
       - publisher: Moo0
         name: Moo0 全家桶
         cost: freemium
@@ -1251,6 +1409,52 @@ contents:
         tags: [全家桶]
         comment: 簡單、精心設計和易於使用的軟體。包括檔案總管、字形瀏覽器、圖片瀏覽器。
         links: [{class: homepage, href: "http://www.xiles.net/"}]
+      - publisher: lsd-rs
+        name: LSD
+        cost: free
+        licenses: [Apache-2.0]
+        tags: [命令列工具, RIIR]
+        comment: LSD 是 命令列工具 [code]ls[/code] 的替代工具。
+        links: [{class: github, href: "https://github.com/lsd-rs/lsd"}]
+        install: [{class: winget, content: "winget install -e --id lsd-rs.lsd"}]
+      - publisher: twpayne
+        name: Chezmoi
+        cost: free
+        licenses: [MIT]
+        tags: [專業, 命令列工具]
+        comment: Chezmoi 是一個管理多台電腦的設定檔的命令列工具。
+        links: [{class: homepage, href: "https://chezmoi.io/"}]
+        install: [{class: winget, content: "winget install -e --id twpayne.chezmoi"}]
+      - publisher: Fastfetch-CLI
+        name: Fastfetch
+        cost: free
+        licenses: [MIT]
+        tags: [命令列工具]
+        comment: Fastfetch 是一個快速的系統資訊顯示工具。
+        links: [{class: github, href: "https://github.com/fastfetch-cli/fastfetch"}]
+        install: [{class: winget, content: "winget install -e --id Fastfetch-cli.Fastfetch"}]
+      - publisher: JanDeDobbeleer
+        name: Oh My Posh
+        cost: free
+        licenses: [MIT]
+        tags: [專業, 命令列工具]
+        comment: Oh My Posh 是一個自訂終端機提示符的工具。
+        links:
+          - {class: github, href: "https://github.com/jandedobbeleer/oh-my-posh"}
+          - {class: homepage, href: "https://ohmyposh.dev/"}
+        install: [{class: winget, content: "winget install -e --id JanDeDobbeleer.OhMyPosh"}]
+  - name: Local Service - 在地服務
+    id: local-service
+    type: folder
+    comment: 服務特定地域的軟體。
+    contents:
+      - publisher: AlanJhu
+        name: 地牛 Wake Up!
+        cost: free
+        licenses: [Proprietary]
+        comment: 台灣強震即時警報。
+        links: [{class: homepage, href: "https://eew.earthquake.tw/"}]
+        install: [{class: winget, content: "winget install -e --id AlanJhu.OXWUEEW"}]
   - name: System Utilities - 系統工具
     id: system-utilities
     type: folder
@@ -1259,16 +1463,23 @@ contents:
         name: CrystalDiskInfo
         cost: free
         licenses: [MIT]
-        comment: 愛的水晶雫幫你監測硬碟狀態。
+        comment: 可愛的水晶雫幫你監測硬碟狀態。
         links: [{class: homepage, href: "https://crystalmark.info/"}]
         install: [{class: winget, content: "winget install -e --id CrystalDewWorld.CrystalDiskInfo"}]
       - publisher: CrystalDewWorld
         name: CrystalDiskMark
         cost: free
         licenses: [MIT]
-        comment: 愛的水晶雫幫你硬碟讀寫測速。
+        comment: 可愛的水晶雫幫你硬碟讀寫測速。
         links: [{class: homepage, href: "https://crystalmark.info/"}]
         install: [{class: winget, content: "winget install -e --id CrystalDewWorld.CrystalDiskMark"}]
+      - publisher: TechPowerUp
+        name: GPU-Z
+        cost: free
+        licenses: [Proprietary]
+        comment: 老牌的顯卡資訊工具。
+        links: [{class: homepage, href: "https://www.techpowerup.com/gpuz/"}]
+        install: [{class: winget, content: "winget install -e --id TechPowerUp.GPU-Z"}]
       - publisher: Microsoft
         name: Windows Terminal
         cost: free
@@ -1290,15 +1501,13 @@ contents:
         comment: Windows 官方收編的，系統工具集合。
         links: [{class: homepage, href: "https://docs.microsoft.com/en-us/sysinternals/"}]
         install: [{class: winget, content: "winget install -e --id Microsoft.Sysinternals.Suite"}]
-      - publisher: Seerge
-        name: G-Helper
+      - publisher: NSSM
+        name: NSSM
         cost: free
-        licenses: [GPL-3.0]
-        comment: 如果你和我一樣是封閉硬體廠商的受害者，例如〇碩的 Armoury Create 是不提供外界操作介入的，好在 G-Helper 提供了第三方的控制面板。
-        links:
-          - {class: homepage, href: "https://g-helper.com/"}
-          - {class: github, href: "https://github.com/seerge/g-helper"}
-        install: [{class: winget, content: "winget install -e --id seerge.g-helper"}]
+        licenses: [GPL-2.0]
+        comment: 在 Windows 上，把任何應用程式的守護進程（Daemon）模式來當成系統服務的管理的工具。
+        links: [{class: homepage, href: "https://nssm.cc/"}]
+        install: [{class: winget, content: "winget install -e --id NSSM.NSSM"}]
       # - publisher: Avast
       #   name: CCleaner 家族
       #   cost: free
@@ -1325,11 +1534,161 @@ contents:
       #       licenses: [Proprietary]
       #       comment: 刪除文件恢復。
       #       links: [{class: homepage, href: "https://www.ccleaner.com/recuva"}]
+      - publisher: Variar
+        name: Klogg
+        cost: free
+        licenses: [GPL-3.0]
+        comment: 強大的日誌檢視器。
+        links: [{class: homepage, href: "https://klogg.filimonov.dev/"}]
+        install: [{class: winget, content: "winget install -e --id Variar.Klogg"}]
+      - publisher: Zarunbal
+        name: LogExpert
+        cost: free
+        licenses: [GPL-2.0]
+        comment: 強大的日誌檢視器。
+        links: [{class: github, href: "https://github.com/LogExperts/LogExpert"}]
+        install: [{class: winget, content: "winget install -e --id Zarunbal.LogExpert"}]
+      - publisher: DiskInternals
+        name: DiskInternals Linux Reader
+        cost: free
+        licenses: [Proprietary]
+        comment: 在 Windows 上讀取 Ext2/3/4、ReiserFS、HFS、HFS+、UFS 等檔案系統。
+        links: [{class: homepage, href: "https://www.diskinternals.com/linux-reader/"}]
+        install: [{class: winget, content: "winget install -e --id DiskInternals.LinuxReader"}]
+  - name: Device and Driver - 驅動程式
+    id: driver
+    type: folder
+    comment: 驅動程式和控制面板。
+    contents:
+      - publisher: Nvidia
+        name: Nvidia App
+        cost: free
+        licenses: [Proprietary]
+        comment: Nvidia 官方出品的驅動程式管理器。
+        links: [{class: homepage, href: "https://www.nvidia.com/en-us/software/nvidia-app/"}]
+        install: [{class: winget, content: "winget install -e --id \"XP8CLZL93F5Z4P\" -s \"msstore\" --accept-source-agreements --accept-package-agreements  # NVIDIA App"}]
+      - publisher: Nvidia
+        name: Nvidia Control Panel
+        cost: free
+        licenses: [Proprietary]
+        comment: Nvidia 官方出品的驅動程式控制面板。
+        links: [{class: homepage, href: "https://www.nvidia.com/en-us/geforce/drivers/"}]
+        install: [{class: winget, content: "winget install -e --id \"9NF8H0H7WMLT\" -s \"msstore\" --accept-source-agreements --accept-package-agreements  # NVIDIA Control Panel"}]
+      - publisher: Nvidia
+        name: Nvidia CUDA Toolkit
+        cost: free
+        licenses: [Proprietary]
+        comment: Nvidia CUDA 工具包，用於開發和運行 CUDA 應用程式，例如 AI。
+        links: [{class: homepage, href: "https://developer.nvidia.com/cuda-toolkit"}]
+        install: [{class: winget, content: "winget install --id \"Nvidia.CUDA\""}]
+      - publisher: Logitech
+        name: Options+
+        cost: free
+        licenses: [Proprietary]
+        comment: "Logitech 官方 [s]惡名昭彰的[/s] 的滑鼠、鍵盤、耳機等外設控制面板。"
+        links: [{class: homepage, href: "https://mikrotik.com/download"}]
+        install: [{class: winget, content: "winget install -e --id Mikrotik.WinBox"}]
+      - publisher: Logitech
+        name: G HUB
+        cost: free
+        licenses: [Proprietary]
+        comment: "Logitech G 系列官方的滑鼠、鍵盤、耳機等外設控制面板。"
+        links: [{class: homepage, href: "https://mikrotik.com/download"}]
+        install: [{class: winget, content: "winget install -e --id Mikrotik.WinBox"}]
+      - publisher: Mikrotik
+        name: WinBox
+        cost: free
+        licenses: [Proprietary]
+        comment: "[s]拉脫維亞的 Cisco 思科[/s] Mikrotik 官方出品的路由器管理工具。"
+        links: [{class: homepage, href: "https://mikrotik.com/download"}]
+        install: [{class: winget, content: "winget install -e --id Mikrotik.WinBox"}]
+      - publisher: Seerge
+        name: G-Helper
+        cost: free
+        licenses: [GPL-3.0]
+        comment: 如果你和我一樣是封閉硬體廠商的受害者，例如〇碩的 Armoury Create 是不提供外界操作介入的，好在 G-Helper 提供了第三方的控制面板。
+        links:
+          - {class: homepage, href: "https://g-helper.com/"}
+          - {class: github, href: "https://github.com/seerge/g-helper"}
+        install: [{class: winget, content: "winget install -e --id seerge.g-helper"}]
+      - publisher: Raspberry Pi Foundation
+        name: Raspberry Pi Imager
+        cost: free
+        licenses: [Apache-2.0]
+        comment: Raspberry Pi 官方出品的 SD 卡燒錄工具。
+        links: [{class: homepage, href: "https://www.raspberrypi.com/software/"}]
+        install: [{class: winget, content: "winget install -e --id RaspberryPiFoundation.RaspberryPiImager"}]
+      - publisher: Rufus
+        name: Rufus
+        cost: free
+        licenses: [GPL-3.0-or-later]
+        comment: 小巧的 USB 開機碟製作工具。
+        note: 甚至內建魔改 Windows 11 安裝的功能，繞過 TPM、Secure Boot、CPU 支援、登錄帳號 等限制。
+        links: [{class: homepage, href: "https://rufus.ie/"}]
+        install: [{class: winget, content: "winget install -e --id Rufus.Rufus"}]
+      - publisher: Ventoy
+        name: Ventoy
+        cost: free
+        licenses: [GPL-3.0-or-later]
+        comment: 小巧的 USB 開機碟製作工具，支援直接丟 ISO 檔案到隨身碟。
+        links: [{class: homepage, href: "https://www.ventoy.net/"}]
+        install: [{class: winget, content: "winget install -e --id Ventoy.Ventoy"}]
+  - name: Apple - 蘋果全家桶
+    id: apple-devices
+    type: folder
+    contents:
+      - publisher: Apple
+        name: Apple Devices
+        cost: free
+        licenses: [Proprietary]
+        comment: Apple 官方出品的裝置管理器，例如 iPhone。
+        note: 現在已經不需要 iTunes 了。
+        links: [{class: homepage, href: "https://www.apple.com/"}]
+        install: [{class: winget, content: 'winget install -e --id "9NP83LWLPZ9K" --accept-source-agreements --accept-package-agreements  # Apple Devices'}]
+      - publisher: Apple
+        name: iCloud
+        cost: free
+        licenses: [Proprietary]
+        comment: Apple 官方出品的雲端服務。
+        links: [{class: homepage, href: "https://www.apple.com/icloud/"}]
+        install: [{class: winget, content: 'winget install -e --id "9PKTQ5699M62" --accept-source-agreements --accept-package-agreements  # iCloud'}]
+      - publisher: Apple
+        name: iTunes
+        cost: free
+        licenses: [Proprietary]
+        comment: Apple 官方出品的媒體管理器。
+        note: "[s]賈伯斯一定是被這個軟體氣死的。[/s]"
+        links: [{class: homepage, href: "https://www.apple.com/itunes/"}]
+        install: [{class: winget, content: 'winget install -e --id "Apple.iTunes"'}]
+      - publisher: Apple
+        name: Bonjour
+        cost: free
+        licenses: [Apache-2.0]
+        comment: Apple 官方出品的網路發現協定。
+        note: 通常是被其他軟體需要。
+        links: [{class: homepage, href: "https://support.apple.com/"}]
+        install: [{class: winget, content: winget install -e --id Apple.Bonjour}]
+      - publisher: nabdev
+        name: iLoader
+        cost: free
+        licenses: [MIT]
+        comment: iOS 側載（Sideload）工具，安裝哪些 App Store 裡面沒有的 App 的 IPA 檔案到 iPhone。
+        note: 需要前置 Apple Devices，具體玩法可以看 [url="https://sidestore.io/"]SideStore[/url] 的說明。
+        links: [{class: github, href: "https://github.com/nab138/iloader"}]
+        install: [{class: winget, content: "winget install -e --id nabdev.iLoader"}]
   - name: Self-host - 自建置
     type: folder
     comment: 為了建置這些軟體／服務，可能需要域名和伺服器。或者本地端用虛擬機。
     id: self-host
     contents:
+      - publisher: GetZola
+        name: Zola
+        cost: free
+        licenses: [EUPL-1.2]
+        tags: [專業, 自建置]
+        comment: 自建置靜態網站生成器。
+        links: [{class: homepage, href: "https://www.getzola.org/"}]
+        install: [{class: winget, content: "winget install -e --id GetZola.Zola"}]
       - publisher: Miniflux
         name: Miniflux
         cost: free
@@ -1413,6 +1772,14 @@ contents:
     id: development
     type: folder
     contents:
+      - publisher: Microsoft
+        name: PowerShell
+        cost: free
+        tags: [專業, 命令列工具]
+        licenses: [GPL-2.0]
+        comment: Windows 內建的 PowerShell 是較舊但和系統綁定更深的版本，而這個是最新版本、跨平臺。
+        links: [{class: homepage, href: "https://docs.microsoft.com/en-us/powershell/",}]
+        install: [{class: winget, content: "winget install -e --id Microsoft.PowerShell"}]
       - publisher: Git
         name: Git
         cost: free
@@ -1421,6 +1788,14 @@ contents:
         comment: 分佈式版本管理。
         links: [{class: homepage, href: "https://git-scm.com/",}]
         install: [{class: winget, content: "winget install -e --id Git.Git"}]
+      - publisher: GitHub
+        name: GitHub Desktop
+        cost: free
+        tags: [專業]
+        licenses: [MIT]
+        comment: "[s]程式工程師的線上交友平臺[/s] GitHub 的桌面應用程式。"
+        links: [{class: homepage, href: "https://desktop.github.com/",}]
+        install: [{class: winget, content: "winget install -e --id GitHub.Desktop"}]
       - publisher: GitHub
         name: GitHub CLI
         cost: free
@@ -1462,8 +1837,80 @@ contents:
         cost: free
         licenses: [Proprietary]
         tags: [全家桶, 專業]
-        comment: 現代的 IDE。
+        comment: 現代的 IDE 品牌，提供多種專業強大開發工具，包括 IntelliJ IDEA、PyCharm、WebStorm、CLion、GoLand 等等。
         links: [{class: homepage, href: "https://www.jetbrains.com/"}]
+        install: [{class: winget, content: "winget install -e --id JetBrains.Toolbox"}]
+      - publisher: Microsoft
+        name: Visual Studio
+        cost: free
+        licenses: [Proprietary]
+        tags: [專業]
+        comment: 老牌的 IDE。
+        links: [{class: homepage, href: "https://visualstudio.microsoft.com/"}]
+        install: [{class: winget, content: "winget install -e --id Microsoft.VisualStudio.Community"}]
+      - publisher: Caddy
+        name: Caddy
+        cost: free
+        licenses: [Apache-2.0]
+        tags: [專業, 自建置]
+        comment: 現代化的 Web 伺服器，支援自動 HTTPS、反向代理、負載平衡等功能。
+        links: [{class: homepage, href: "https://caddyserver.com/"}]
+        install: [{class: winget, content: "winget install -e --id CaddyServer.Caddy"}]
+      - publisher: Microsoft
+        name: WSL
+        cost: free
+        licenses: [MIT]
+        tags: [專業, 命令列工具]
+        comment: Windows Subsystem for Linux，Windows 內建的 Linux 子系統。
+        links: [{class: homepage, href: "https://learn.microsoft.com/en-us/windows/wsl/"}]
+        install: [{class: winget, content: "winget install -e --id Microsoft.WSL"}]
+        contents:
+          - publisher: Canonical
+            name: Ubuntu
+            cost: free
+            licenses: [GPL-2.0-or-later]
+            tags: [專業, 命令列工具]
+            comment: 首個專門為 WSL 打造[s]（叛變）[/s]的 Linux 發行版。
+            links: [{class: homepage, href: "https://ubuntu.com/wsl"}]
+            install: [{class: winget, content: "winget install -e --id Canonical.Ubuntu"}]
+      - publisher: Eclipse Adoptium
+        name: Eclipse Temurin JRE 26
+        cost: free
+        id: eclipse-temurin-jre
+        licenses: [GPL-2.0]
+        comment: 當 Oracle 把 Java 的桌子掀翻之後，Java 的開發、執行環境被各大公司接手維護，Eclipse 基金會的 Adoptium 是其中之一，提供免費、開源、跨平臺的 Java 執行環境。
+        note: 請按需安裝對應版本。
+        links: [{class: homepage, href: "https://adoptium.net/"}]
+        install: [{class: winget, content: "winget install -e --id EclipseAdoptium.Temurin.26.JRE"}]
+      - name: Programming Languages - 程式語言
+        id: programming-languages
+        type: folder
+        contents:
+          - publisher: Python
+            name: Python
+            cost: free
+            licenses: [PSF-2.0]
+            tags: [專業, 命令列工具]
+            comment: 現代的程式語言，簡單、易學、強大、跨平臺。
+            note: 是的，當然也可以通過 Winget 等包管理器安裝程式語言的編譯器／直譯器！這裡先用 Python 作為示範。
+            links: [{class: homepage, href: "https://www.python.org/"}]
+            install: [{class: winget, content: "winget install -e --id Python.PythonInstallManager"}]
+          - publisher: Schniz
+            name: fnm
+            cost: free
+            licenses: [MIT]
+            tags: [專業, 命令列工具]
+            comment: Node.js 的管理工具。
+            links: [{class: github, href: "https://github.com/schniz/fnm"}]
+            install: [{class: winget, content: "winget install -e --id Schniz.fnm"}]
+          - publisher: Rust
+            name: Rust
+            cost: free
+            licenses: [Apache-2.0, MIT]
+            tags: [專業, 命令列工具]
+            comment: 現代的程式語言，安全、快速、跨平臺。
+            links: [{class: homepage, href: "https://www.rust-lang.org/"}]
+            install: [{class: winget, content: "winget install -e --id Rustlang.Rustup"}]
   - name: Text Editor - 文字編輯器
     id: text-editor
     type: folder
@@ -1544,11 +1991,20 @@ contents:
     contents:
       - publisher: Valve
         name: Steam
+        id: valve-steam
         cost: freemium
         licenses: [Proprietary]
         comment: 其實是數位發行平台，不只是遊戲，還有軟體、影片、音樂...
         links: [{class: homepage, href: https://store.steampowered.com/}]
         install: [{class: winget, content: "winget install -e --id Valve.Steam"}]
+      - publisher: Blizzard
+        name: Battle.net
+        id: blizzard-battlenet
+        cost: freemium
+        licenses: [Proprietary]
+        comment: 暴雪官方的數位發行平台。
+        links: [{class: homepage, href: "https://www.blizzard.com/zh-tw/apps/battle.net/desktop"}]
+        install: [{class: winget, content: "winget install -e --id Blizzard.BattleNet"}]
       - publisher: PortableApps.com
         name: PortableApps.com Platform
         cost: free
@@ -1586,3 +2042,52 @@ contents:
           - {class: github, href: "https://github.com/ScoopInstaller/Scoop"}
           - {class: site, content: 本站介紹, href: "https://undecv.github.io/blog/posts/command-line-guide/windows-package-managers/"}
         install: [{class: winget, content: "winget install -e --id Chocolatey.Chocolatey"}]
+  - name: Games - 遊戲
+    id: games
+    type: folder
+    contents:
+      - publisher: Valve
+        name: Steam
+        type: reference
+        refer: valve-steam
+        comment: 其實是數位發行平台，不只是遊戲，還有軟體、影片、音樂...
+      - publisher: Blizzard
+        name: Battle.net
+        type: reference
+        refer: blizzard-battlenet
+        comment: 暴雪官方的數位發行平台。
+      - publisher: BlueStack
+        name: BlueStacks
+        cost: free
+        licenses: [Proprietary]
+        tags: [很多廣告]
+        comment: 在 Windows 電腦上玩 Android 遊戲。
+        note: 雖然廣告很多，奈何這個領域沒有多少好的選擇：（
+        links: [{class: homepage, href: "https://cheatengine.org/index.php"}]
+        install: [{class: winget, content: "winget install -e --id BlueStack.BlueStacks"}]
+      - publisher: OpenTTD
+        name: OpenTTD
+        cost: free
+        licenses: [GPL-2.0]
+        comment: 經典遊戲 Transport Tycoon Deluxe 運輸大亨 的開源重製版。
+        links: [{class: homepage, href: "https://www.openttd.org/"}]
+        install: [{class: winget, content: "winget install -e --id OpenTTD.OpenTTD"}]
+      - publisher: Mojang
+        name: Minecraft Launcher
+        cost: paid
+        licenses: [Proprietary]
+        comment: 你可以沒玩過 Minecraft，但你一定看過他們的影片。
+        links: [{class: homepage, href: "https://www.minecraft.net/"}]
+        install: [{class: winget, content: "winget install -e --id Mojang.MinecraftLauncher"}]
+      - publisher: Prism Launcher
+        name: Prism Launcher
+        cost: free
+        licenses: [GPL-3.0]
+        comment: Minecraft 的開源啟動器，支援多版本、多模組。
+        links: [{class: homepage, href: "https://prismlauncher.org/"}]
+        install: [{class: winget, content: "winget install -e --id PrismLauncher.PrismLauncher"}]
+      - publisher: Dark Byte
+        name: Cheat Engine
+        type: reference
+        refer: dark-byte-cheat-engine
+        comment: 遊戲記憶體修改器，支援單機遊戲和模擬器。
