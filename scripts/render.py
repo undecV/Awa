@@ -118,6 +118,15 @@ def normalize_nodes(
     return nodes
 
 
+def count_entries(nodes: list[dict[str, any]]) -> int:
+    """Count application entries, excluding folders and references."""
+    return sum(
+        (1 if node.get("type", "application") == "application" else 0)
+        + count_entries(node.get("contents", []))
+        for node in nodes
+    )
+
+
 def main() -> None:
     """Main entry point for the script."""
     root = Path(__file__).resolve().parents[1]
@@ -172,6 +181,7 @@ def main() -> None:
         contents = yaml.safe_load(data_path.read_text(encoding=ENCODING))
         context = {
             "contents": normalize_nodes(contents["contents"]),
+            "entry_count": count_entries(contents["contents"]),
             "page": {
                 "template": str(page_path.relative_to(root)),
                 "data": str(data_path.relative_to(root))
