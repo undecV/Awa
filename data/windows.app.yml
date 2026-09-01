@@ -216,9 +216,10 @@ contents:
           name: RustDesk
           cost: freemium
           licenses: [AGPL-3.0]
-          comment: 遠端桌面。TeamViewer 的本地化替代。提供自己架設伺服器。
+          comment: 簡單易用跨網路遠端桌面。可以說是 TeamViewer、AnyDesk 的開源、本地化替代。提供自己架設伺服器。
+          note: "和 TeamViewer、AnyDesk 之類的「簡單遠端」軟體一樣，[b]預設的設定極不安全。[/b]"
           links: [{class: homepage, href: "https://rustdesk.com/"}]
-          install: [{class: winget, content: "winget install -e --id RustDesk.RustDesk"}]
+          install: [{class: scoop, content: "scoop bucket add extras; scoop install extras/rustdesk"}]
         - publisher: Google
           name: Chrome Remote Desktop
           cost: free
@@ -1555,6 +1556,14 @@ contents:
         comment: 在 Windows 上讀取 Ext2/3/4、ReiserFS、HFS、HFS+、UFS 等檔案系統。
         links: [{class: homepage, href: "https://www.diskinternals.com/linux-reader/"}]
         install: [{class: winget, content: "winget install -e --id DiskInternals.LinuxReader"}]
+      - publisher: Microsoft
+        name: PC Manager
+        licenses: [Proprietary]
+        cost: free
+        comment: 如果你有任何理由需要一個「電腦管家」類型的軟體，不如就試試這個 M$ 官方推出、自打自臉、自砸自腳的自家管家吧！
+        Note: 此類「系統加速」產品[b]安慰劑效應大於實際效果[/b]，請斟酌使用。
+        links: [{class: homepage, href: "https://pcmanager.microsoft.com/en-us"}]
+        install: [{class: winget, content: 'winget install -e --id "9PM860492SZD" -s "msstore" --accept-source-agreements --accept-package-agreements  # Microsoft PC Manager'}]
   - name: Device and Driver - 驅動程式
     id: driver
     type: folder
