@@ -553,7 +553,7 @@ contents:
           name: Flameshot
           cost: free
           licenses: [GPL-3.0]
-          comment: 小巧的截圖工具。
+          comment: 小巧但是功能豐富的，開源、跨平台的進階截圖工具，支援即時標註、模糊、貼圖（Pin）與高度自訂。
           links: [{class: homepage, href: "https://flameshot.org"}]
           install: [{class: winget, content: "winget install -e --id Flameshot.Flameshot"}]
       - name: Comic Reader - 漫畫閱讀器
@@ -1561,7 +1561,7 @@ contents:
         licenses: [Proprietary]
         cost: free
         comment: 如果你有任何理由需要一個「電腦管家」類型的軟體，不如就試試這個 M$ 官方推出、自打自臉、自砸自腳的自家管家吧！
-        Note: 此類「系統加速」產品[b]安慰劑效應大於實際效果[/b]，請斟酌使用。
+        note: 此類「系統加速」產品[b]安慰劑效應遠遠大於實際效果[/b]，請斟酌使用。
         links: [{class: homepage, href: "https://pcmanager.microsoft.com/en-us"}]
         install: [{class: winget, content: 'winget install -e --id "9PM860492SZD" -s "msstore" --accept-source-agreements --accept-package-agreements  # Microsoft PC Manager'}]
   - name: Device and Driver - 驅動程式
@@ -2046,6 +2046,7 @@ contents:
         licenses: [Apache-2.0]
         tags: [命令列工具]
         comment: Windows 上的軟體套件管理器。
+        note: 是的你沒看錯，你可以用軟體套件管理器安裝軟體套件管理器。
         links:
           - {class: homepage, href: "https://chocolatey.org/"}
           - {class: github, href: "https://github.com/ScoopInstaller/Scoop"}
