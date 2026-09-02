@@ -37,7 +37,7 @@ contents:
   - name: Cloud Service - 雲端服務
     type: folder
     id: service
-    comment: 是的，常見的雲端服務都的 Windows 客戶端都載得到。
+    comment: 是的，常見的雲端服務的 Windows 客戶端都載得到。
     contents:
       - publisher: Telegram
         name: Telegram
@@ -845,7 +845,7 @@ contents:
             cost: free
             licenses: [MIT]
             comment: 超高速檔案搜尋。原來 Windows 搜尋不必這麼慢。在建立索引後幾乎是即時搜尋。
-            note: 被諸多軟體用來做檔案搜尋的後端，可以說是是必備神器。
+            note: 被諸多軟體用來做檔案搜尋的後端，可以說是必備神器。
             links: [{class: homepage, href: "https://www.voidtools.com/"}]
             install: [{class: winget, content: "winget install -e --id voidtools.Everything"}]
             contents:
@@ -889,14 +889,14 @@ contents:
         name: Gpg4win
         cost: free
         licenses: [GPL-2.0]
-        comment: 密碼學軟體禮盒版。用公＼私密鑰建立、管理、驗證、簽署、加密文字、檔案和郵件。
+        comment: 密碼學軟體禮盒版。用公／私密鑰建立、管理、驗證、簽署、加密文字、檔案和郵件。
         links: [{class: homepage, href: "https://gpg4win.org/",}]
         install: [{class: winget, content: "winget install -e --id GnuPG.Gpg4win"}]
       - publisher: IDRIX
         name: VeraCrypt
         cost: free
         licenses: [Apache-2.0]
-        comment: 磁碟＼分割區＼虛擬分割區加密，TrueCrypt 的傳承者。
+        comment: 磁碟／分割區／虛擬分割區加密，TrueCrypt 的傳承者。
         links: [{class: github, href: "https://github.com/veracrypt/VeraCrypt"}]
         install: [{class: winget, content: "winget install -e --id IDRIX.VeraCrypt"}]
       - publisher: Eraser
