@@ -84,13 +84,13 @@ contents:
         cost: free
         licenses: [Apache-2.0, MIT]
         comment: 網路流量監控工具，UI 在好看和好用之間選擇了別具一格；想知道到底是哪個程式正在吃你的網路，可以先從它開始。
-        notes: 需要 Npcap（的 Wpcap 模式）前置。
+        note: 需要 Npcap（的 Wpcap 模式）前置。
         links: [{class: homepage, href: "https://sniffnet.net/"}]
       - publisher: Ashfaaq18
         name: OpenNetMeter
         cost: free
         licenses: [Apache-2.0]
-        comment: 網路流量監控工具，介面簡樸，適合常駐後臺；
+        comment: 網路流量監控工具，介面簡樸，適合常駐後臺。
         links: [{class: github, href: "https://github.com/Ashfaaq18/OpenNetMeter"}]
       - publisher: GlassWire
         name: GlassWire
@@ -326,14 +326,14 @@ contents:
         cost: free
         licenses: [Proprietary]
         comment: Winamp 的精神後繼，傳統本地音樂播放器，功能完整、介面正常，而且真的還可以換皮。
-        links: [{class: homepage, href: "https://www.foobar2000.org/"}]
+        links: [{class: homepage, href: "https://aimp.ru/"}]
         install: [{class: winget, content: "winget install -e --id AIMP.AIMP"}]
       - publisher: Audacity
         name: Audacity
         cost: free
         tags: [專業]
         licenses: [GPL-3.0-or-later]
-        comment: 錄音、剪接、降噪、效果處理。
+        comment: 錄音、剪接、降噪、效果處理。需要剪一段聲音又想從車庫裏面搬出整套 DAW 時，通常就是它。
         links: [{class: homepage, href: "https://www.audacityteam.org/"}]
         install: [{class: winget, content: "winget install -e --id Audacity.Audacity"}]
       - publisher: VB-Cable
@@ -341,7 +341,7 @@ contents:
         cost: free
         tags: [專業]
         licenses: [Proprietary]
-        comment: 虛擬音訊混音器。可以把多個音訊裝置的輸入輸出混在一起，並且做一些簡單的處理。
+        comment: 把 Windows 裡原本各走各路的麥克風、喇叭和軟體音訊全部拉進一張虛擬混音台；直播、錄影、語音聊天想要「這個聲音送這裡，那個聲音不要送那裡」時非常好用。
         links: [{class: homepage, href: "https://www.voicemeeter.com/"}]
         install: [{class: winget, content: "winget install -e --id VB-Audio.Voicemeeter"}]
       - publisher: Jackaudio
@@ -417,7 +417,7 @@ contents:
             cost: free
             tags: [專業]
             licenses: [GPL-2.0]
-            comment: 實況、直播串流、錄屏的業界標準。
+            comment: 實況、直播串流與螢幕錄製的事實標準：場景、來源、混音、編碼、插件一應俱全，從個人直播到大型活動都靠它撐場。
             links: [{class: homepage, href: "https://obsproject.com/"}]
             install: [{class: winget, content: "winget install -e --id OBSProject.OBSStudio"}]
           - publisher: KDE
@@ -776,7 +776,7 @@ contents:
         name: dupeGuru
         cost: free
         licenses: [GPL-3.0-or-later]
-        comment: 尋找重複檔案。
+        comment: 專門找到那些名字不同、位置不同，內容其實一模一樣的重複檔案。
         links: [{class: homepage, href: "https://dupeguru.voltaicideas.net",}]
         install: [{class: winget, content: "winget install -e --id DupeGuru.DupeGuru"}]
       - publisher: HulubuluSoftware
@@ -799,7 +799,7 @@ contents:
         cost: free
         tags: [內建在 Windows, 命令列工具]
         licenses: [Proprietary]
-        comment: 高級檔案複製、移動工具。內建在 Windows，命令列工具。
+        comment: Windows 內建的重型檔案搬運工具：續傳、多執行緒、重試、鏡像、權限與紀錄樣樣都有，特別適合配合腳本程式和大量資料搬遷。
         links: [{class: homepage, href: "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy"}]
       - name: Compression - 檔案壓縮
         id: compression
@@ -1208,7 +1208,8 @@ contents:
             name: Sigil
             cost: free
             licenses: [GPL-3.0]
-            comment: EPUB 編輯器。
+            comment: EPUB 編輯器。如果你想自己做電子書，或者想修改別人的電子書。
+            note: EPUB 的本質是 ZIP 包裝的 XHTML + CSS。
             links: [{class: homepage, href: "https://sigil-ebook.com/"}]
             install: [{class: winget, content: "winget install -e --id Sigil-Ebook.Sigil"}]
           - publisher: SumatraPDF
@@ -1310,7 +1311,7 @@ contents:
         cost: freemium
         licenses: [Proprietary]
         comment: 把文件、資料庫、Wiki、任務管理揉成一個巨大資訊工作台的代表作。所有內容都從 Block 開始，幾個 Block 疊成頁面，頁面又能變成資料庫的一筆資料；從讀書筆記一路蓋到公司 Wiki、專案管理甚至 CRM 都可以做。
-        links: [{class: github, href: "https://www.notion.com/"}]
+        links: [{class: homepage, href: "https://www.notion.com/"}]
         install: [{class: winget, content: "winget install -e --id Notion.Notion"}]
       # - publisher: Zettlr
       #   name: Zettlr
@@ -1890,7 +1891,7 @@ contents:
         cost: free
         tags: [專業]
         licenses: [MIT]
-        comment: "[s]程式工程師的線上交友平臺[/s] GitHub 的桌面應用程式。"
+        comment: "[s]程式工程師的線上交友平臺[/s] GitHub 的桌面應用程式。把 Git 日常操作整理成正常桌面工作流，適合不想每次都跟 Git 指令鬥智鬥勇的人。"
         links: [{class: homepage, href: "https://desktop.github.com/",}]
         install: [{class: winget, content: "winget install -e --id GitHub.Desktop"}]
       - publisher: GitHub
@@ -1898,7 +1899,7 @@ contents:
         cost: free
         tags: [專業, 命令列工具]
         licenses: [MIT]
-        comment: GitHub 命令列工具。
+        comment: GitHub 命令列工具，Issue、Pull Request、Release、Workflow 都能直接操作。
         links: [{class: homepage, href: "https://cli.github.com/",}]
         install: [{class: winget, content: "winget install -e --id GitHub.cli"}]
       - publisher: DevToys
@@ -1919,14 +1920,15 @@ contents:
         name: Pencil
         cost: free
         licenses: [GPL-2.0]
-        comment: 繪製軟體草圖（mockups）。
+        comment: 繪製軟體草圖（mockups）。不必先學 Figma，也不用真的寫一行程式，就能快速拼出視窗、按鈕、選單和流程圖的介面草圖工具；適合在「我有個 UI 想法」到「值得真的做」之間先畫給人看。
         links: [{class: homepage, href: "https://pencil.evolus.vn/"}]
         install: [{class: winget, content: "winget install -e --id Evolus.Pencil"}]
       - publisher: Docker
         name: Docker Desktop
         cost: free
         licenses: [Proprietary]
-        comment: 現代伺服基礎設施 Docker，但是在 Windows 上。
+        comment: 現代伺服基礎設施 Docker，但是在 Windows 上。把應用程式連同它的執行環境一起裝箱，使得在哪台機器上執行都盡量長得一樣。
+        note: "[s]什麼叫做明明在我的電腦上可以跑？[/s]"
         links: [{class: homepage, href: "https://www.docker.com/"}]
         install: [{class: winget, content: "winget install -e --id Docker.DockerDesktop"}]
       - publisher: JetBrains
